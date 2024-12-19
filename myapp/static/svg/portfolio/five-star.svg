@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 40" width="300" height="40">
+  <g>
+    <!-- Filled Star 1 -->
+    <path fill="#FFFFFF" d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.77 1.572 8.208L12 18.896l-7.508 4.388 1.572-8.208L0 9.306l8.332-1.151L12 .587z" transform="translate(0 0)"/>
+    <!-- Filled Star 2 -->
+    <path fill="#FFFFFF" d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.77 1.572 8.208L12 18.896l-7.508 4.388 1.572-8.208L0 9.306l8.332-1.151L12 .587z" transform="translate(60 0)"/>
+    <!-- Filled Star 3 -->
+    <path fill="#FFFFFF" d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.77 1.572 8.208L12 18.896l-7.508 4.388 1.572-8.208L0 9.306l8.332-1.151L12 .587z" transform="translate(120 0)"/>
+    <!-- Filled Star 4 -->
+    <path fill="#FFFFFF" d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.77 1.572 8.208L12 18.896l-7.508 4.388 1.572-8.208L0 9.306l8.332-1.151L12 .587z" transform="translate(180 0)"/>
+    <!-- Outlined Star -->
+    <path fill="#FFFFFF" d="M12 .587l3.668 7.568 8.332 1.151-6.064 5.77 1.572 8.208L12 18.896l-7.508 4.388 1.572-8.208L0 9.306l8.332-1.151L12 .587z" transform="translate(240 0)"/>
+  </g>
+</svg>

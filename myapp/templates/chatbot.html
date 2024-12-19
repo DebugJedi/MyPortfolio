@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GraphRAG Chat Bot</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link href="{{ url_for('static', path='/css/styles.css') }}" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>GraphRAG Chat Bot 📄🔍⚡</h1>
+    </header>
+    
+    <div class="upload-container">
+        <h2>Upload Your PDF</h2>
+        
+        <form id="upload-form" enctype="multipart/form-data">
+            <input type="file" id="file-upload" accept=".pdf" onchange="displayFileName()" />
+            <div id="file-info" class="file-info" style="display: none;">
+                <span class="file-icon">&#128459;</span>
+                <i class="fas fa-folder file-icon"></i>
+                <span id="file-name"></span>
+            </div>
+            <button id="upload-button" type="button" onclick="uploadFile()">Upload</button>
+            <div id="loading-spinner" style="display: none;">
+                <i class="fas fa-spinner fa-spin"></i> Uploading...
+            </div>
+            <div id="upload-message" class="upload-message" style="margin-top: 10px; color: green;"></div>
+        </form>
+    </div>
+
+    <div id="chat-container" style="display: none;">
+        <input type="text" id="query" placeholder="Enter your question" />
+        <button onclick="askQuestion()">Ask</button>
+        <div id="response"></div>
+    </div>
+    <div id = "chat-history" class="chat-history" style="display: none;">
+
+    </div>
+    <script src="/static/js/chatbot.js"></script>
+    <link href="{{ url_for('static', path='css/chatbot.css') }}" rel="stylesheet">
+</body>
+</html>

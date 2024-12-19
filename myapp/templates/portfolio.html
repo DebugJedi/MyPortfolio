@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <title>Portfolio</title>
+    
+</head>
+<body>
+    <header class="header">
+        
+        <div class="h-box logo">            
+            <img src="{{ url_for('static', path='img/img5.png') }}" alt="logo">
+        </div>
+        
+        <div class="h-box logo-header">
+            <span class="name">MyLab</span>
+            <span class="profession">Data Science</span>
+        </div>
+
+        <nav class="h-box nav">
+            <ul class="nav-links">
+                <li><a class="home-button" href="#skills">Skills</a></li>
+                <li><a class="about-button" href="#achievements" class="active">Achievements</a></li>
+                <li><a class="portfolio-button" href="#projects">Projects</a></li>
+                <li><a class="contact-button" href="/#page-2">Contact</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+
+    <main class="pf-pages">
+        <section class="page page-1" id="skills">
+            <h3 class="h3 el">SKILLS</h3>
+            
+            <ul class="left-section el">
+                
+                <li class="cat-heading">Programming</li>
+                <li class="skill">
+                    <span class="skill-name">Python</span>
+                    <div class="stars">
+                        <span class="five-star"></span>
+                    </div>
+                </li>
+                    
+                <li class="skill">
+                    <span class="skill-name">R</span>
+                    <div class="stars">
+                        <span class="three-star"></span>
+                    </div>
+                </li>
+
+                <li class="skill">
+                    <span class="skill-name">SQL</span>
+                    <div class="stars">
+                        <span class="four-star"></span>
+                    </div>
+                </li>
+               
+                <li class="skill">
+                    <span class="skill-name">JavaScript</span>
+                    <div class="stars">
+                        <span class="three-star"></span>
+                    </div>
+                </li>
+
+                <li class="skill">
+                    <span class="skill-name">HTML</span>
+                    <div class="stars">
+                        <span class="three-star"></span>
+                    </div>
+                </li>
+
+                <li class="skill">
+                    <span class="skill-name">CSS</span>
+                    <div class="stars">
+                        <span class="three-star"></span>
+                    </div>
+                </li>
+
+                <li class="skill">
+                    <span class="skill-name">Jenkins</span>
+                    <div class="stars">
+                        <span class="four-star"></span>
+                    </div>
+                </li>
+
+                <li class="skill">
+                    <span class="skill-name">YAML</span>
+                    <div class="stars">
+                        <span class="three-star"></span>
+                    </div>
+                </li>
+
+                <li class="skill">
+                    <span class="skill-name">Machine Learning</span>
+                    <div class="stars">
+                        <span class="four-star"></span>
+                    </div>
+                </li>
+
+                <li class="cat-heading">Statistical Analysis</li>
+                    
+                <li class="skill">
+                    <span class="skill-name">Hypothesis Analysis</span>
+                    <div class="stars">
+                        <span class="four-star"></span>
+                    </div>
+                </li>
+
+                <li class="skill">
+                    <span class="skill-name">A/B Testing</span>
+                    <div class="stars">
+                        <span class="four-star"></span>
+                    </div>
+                </li>
+
+                <li class="skill">
+                    <span class="skill-name">Time Series Analysis</span>
+                    <div class="stars">
+                        <span class="four-star"></span>
+                    </div>
+                </li>
+
+          
+            </ul>
+
+            <ul class="right-section el">
+                
+                
+                <li class="cat-heading">Critical Thinking</li>
+                
+                <li class="skill">
+                    <span class="skill-name">Developing Strategies</span>
+                    <div class="stars">
+                        <span class="four-star"></span>
+                    </div>
+                </li>
+
+                <li class="skill">
+                    <span class="skill-name">Recommending Actionable Insights</span>
+                    <div class="stars">
+                        <span class="three-star"></span>
+                    </div>
+                </li>
+                
+                <li class="skill">
+                    <span class="skill-name">Data Interpretation</span>
+                    <div class="stars">
+                        <span class="four-star"></span>
+                    </div>
+                </li>
+
+                <li class="skill">
+                    <span class="skill-name">Gathering Business Requirements</span>
+                    <div class="stars">
+                        <span class="four-star"></span>
+                    </div>
+                </li>
+
+                <li class="cat-heading">Data Visualization</li>
+                
+                <li class="skill">
+                    <span class="skill-name">Tableau</span>
+                    <div class="stars">
+                        <span class="three-star"></span>
+                    </div>
+                </li>
+                
+                <li class="skill">
+                    <span class="skill-name">Power BI</span>
+                    <div class="stars">
+                        <span class="four-star"></span>
+                    </div>
+                </li>
+
+                <li class="skill">
+                    <span class="skill-name">Qlik Sense</span>
+                    <div class="stars">
+                        <span class="three-star"></span>
+                    </div>
+                </li>
+
+                <li class="cat-heading">Data Manupulation & Engineering</li>
+                
+                <li class="skill">
+                    <span class="skill-name">Data Cleaning</span>
+                    <div class="stars">
+                        <span class="four-star"></span>
+                    </div>
+                </li>
+
+                <li class="skill">
+                    <span class="skill-name">Feature Engineering</span>
+                    <div class="stars">
+                        <span class="four-star"></span>
+                    </div>
+                </li>
+
+                <li class="skill">
+                    <span class="skill-name">Data Modelling</span>
+                    <div class="stars">
+                        <span class="four-star"></span>
+                    </div>
+                </li>
+
+                <li class="skill">
+                    <span class="skill-name">Data Warehousing</span>
+                    <div class="stars">
+                        <span class="four-star"></span>
+                    </div>
+                </li>
+
+                <li class="skill">
+                    <span class="skill-name">SQL Queries</span>
+                    <div class="stars">
+                        <span class="four-star"></span>
+                    </div>
+                </li>
+
+            
+
+            </ul>   
+        </section>
+
+        <section class="page page-2" id="achievements">
+            
+            <div class="top"> Recent Courses & Certificates </div>
+            
+            <div class="button left-button"><i class="fa fa-angle-left" ></i></div>
+            
+            <div class="certificates">
+                <div class="item CC001">
+                    
+                    <img src="/static/img/portfolio/Certificates/AWS-Cloud Practioner.png" alt=""> 
+                    
+                    <div class="layer">
+                        <h3>AWS-Cloud Practioner</h3>
+                        <a href="https://www.credly.com/badges/3922213e-08f1-4b30-b35f-1db48017c68f/public_url" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                    
+                </div>
+
+                <div class="item CC002">
+                    <img src="/static/img/portfolio/Certificates/Associate Data Scientist.png" alt=""> 
+                    
+                    <div class="layer">
+                        <h3>Associate Data Scientist</h3>
+                        <a href="https://www.datacamp.com/completed/statement-of-accomplishment/track/56c9c005f8378bdce7e344fbf85e9c9b3571fcac" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="item CC003">
+                    <img src="/static/img/portfolio/Certificates/Data Cleaning Google.png" alt=""> 
+                    
+                    <div class="layer">
+                        <h3>Data Cleaning </h3>
+                        <a href="https://www.coursera.org/account/accomplishments/certificate/F7YN2GSZPRUC" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="item CC004">
+                    <img src="/static/img/portfolio/Certificates/SupervisedLearningSciKit.png" alt=""> 
+                    
+                    <div class="layer">
+                        <h3>Supervised Learning (scikit-learn)</h3>
+                        <a href="https://www.datacamp.com/statement-of-accomplishment/course/8f5411d89db81c7c3aab55cfa5900fbc07b7626c?raw=1" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="item CC005">
+                    <img src="/static/img/portfolio/Certificates/Advanced Learning Algorithms.png" alt=""> 
+                    
+                    <div class="layer">
+                        <h3>Advanced Learning Algorithms</h3>
+                        <a href="https://www.coursera.org/account/accomplishments/certificate/ZG46NV6OMDUO" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="item CC006">
+                    <img src="/static/img/portfolio/Certificates/ MS-Azure.png" alt=""> 
+                    
+                    <div class="layer">
+                        <h3>Microsoft Azure Cloud Services</h3>
+                        <a href="https://www.coursera.org/account/accomplishments/certificate/2BTHV2NRXCPA" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="item CC007">
+                    <img src="/static/img/portfolio/Certificates/AccountingFundamentals.png" alt=""> 
+                    
+                    <div class="layer">
+                        <h3>CFI Accounting Fundamentals</h3>
+                        <a href="https://credentials.corporatefinanceinstitute.com/7ccacb22-37a8-409f-bdf5-b04b0629e129#acc.xd0gcX1w" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="item CC008">
+                    <img src="/static/img/portfolio/Certificates/HypothesisTesting.png" alt=""> 
+                    
+                    <div class="layer">
+                        <h3>Hypothesis Testing</h3>
+                        <a href="https://www.datacamp.com/completed/statement-of-accomplishment/course/5506e2f73a9cf482a9c3a19d85a22a468aed0dd9" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="item CC009">
+                    <img src="/static/img/portfolio/Certificates/ArimaModel.png" alt=""> 
+                    
+                    <div class="layer">
+                        <h3>Arima Model</h3>
+                        <a href="https://www.datacamp.com/completed/statement-of-accomplishment/course/bd9fad9196957a4e47b53a58aeecf82122fd2847" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="item CC010">
+                    <img src="/static/img/portfolio/Certificates/ CI-CD.png" alt=""> 
+                    
+                    <div class="layer">
+                        <h3>CI/CD for ML</h3>
+                        <a href="https://www.datacamp.com/completed/statement-of-accomplishment/course/2b13faa02534afc93612e6704bc643fc4cbb38a0" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="item CC001">
+                    <img src="/static/img/portfolio/Certificates/Docker.png" alt=""> 
+                    
+                    <div class="layer">
+                        <h3>Docker</h3>
+                        <a href="https://www.datacamp.com/completed/statement-of-accomplishment/course/760a1580b5f8c157d2ff47a3ef46639cf97ed2fc" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="item CC002">
+                    <img src="/static/img/portfolio/Certificates/DataVizMatplotlib.png" alt=""> 
+                    
+                    <div class="layer">
+                        <h3>Data Visualization With Matplotlib</h3>
+                        <a href="https://www.datacamp.com/completed/statement-of-accomplishment/course/211aa386fe612191dcf019f160b14664f54b62e4" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="item CC003">
+                    <img src="/static/img/portfolio/Certificates/Machine Learning.png" alt=""> 
+                    
+                    <div class="layer">
+                        <h3>Machine Learning</h3>
+                        <a href="https://www.coursera.org/account/accomplishments/certificate/2UON8KMHMDFB" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="item CC004">
+                    <img src="/static/img/portfolio/Certificates/PySparkAndPython.png" alt=""> 
+                    
+                    <div class="layer">
+                        <h3>PySpark and Python</h3>
+                        <a href="https://www.udemy.com/certificate/UC-44a324c3-449a-4ea8-b391-67082b4836a3" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div> 
+                
+            </div>
+
+            <div class="button right-button"><i class="fa fa-angle-right"></i></div> 
+        </section>
+
+        <section class="page page-3" id="projects">
+
+            <div class="page3-box proj-header">🎖️ Recent Projects 🎖️</div>
+            
+            <div class="page3-box button projects-left-button"><i class="fa fa-angle-left" ></i></div>
+            
+            <div class="page3-box left-section">
+                <div class="desc desc001">
+                    <h3>Project Overview: Breast Cancer Prediction using Neural Networks</h3>
+                    <p>
+                        This project aims to build a predictive model to classify breast cancer tumors as either malignant (M) or benign (B) based on various features derived from cell measurements. The model utilizes a neural network (NN) architecture for binary classification, leveraging a dataset of features that describe the characteristics of cell nuclei in breast cancer biopsies. The final goal is to predict whether a tumor is malignant or benign based on these measurements, helping medical professionals make informed decisions about treatment.
+                        
+                        The model is built using a fully connected neural network (also known as a Multi-Layer Perceptron, or MLP)
+
+                    </p>
+                </div>
+                <div class="desc desc002">
+                    <h3>Cold Email</h3>
+                    <p>
+                        This application, built using Python and the LangChain framework, automates the process of generating a personalized cold email for job applications. The email is crafted based on a user's resume and a job posting scraped from a URL. The core components of the application include:
+
+                        Groq API Integration: The app utilizes the ChatGroq model for language processing, which is responsible for generating tailored email content. The model uses the "llama-3.1-70b-versatile" variant, offering advanced capabilities for text generation.
+
+                    </p>
+                </div>
+                <div class="desc desc003">
+                    <h3>Custom Hand Gesture Detection with YOLO</h3>
+                    <p>
+                        
+                        This project showcases a custom hand gesture detection system built using the YOLO (You Only Look Once) object detection framework. The model is designed to recognize and classify five common hand gestures: FingersCross, OK, PeaceOut, ThumbsDown, and ThumbsUp.
+                        This project demonstrates the power of YOLO for real-world applications by training a custom model for specialized object detection tasks. It also emphasizes efficient development practices with Dev Containers, enabling developers to quickly get started with training, fine-tuning, and deploying machine learning models.
+
+                        This setup is ideal for developers, researchers, and enthusiasts looking to explore object detection or create interactive applications that utilize computer vision
+                    </p>
+                </div>
+                <div class="desc desc004">
+                    <h3>The GraphRAG ChatBot</h3>
+                    <p>
+                        The ChatBot is like a super-smart map that helps answer questions about any document. It breaks the document into small pieces, turns them into nodes, and connects these points with edges if they share ideas. To make this map, I use tools like NetworkX to organize information, a lemmatizer to simplify words, and embeddings to compare ideas as numbers.
+                        This chatbot doesn’t just stop at finding related ideas—it goes further. It uses a llm to understand the concepts and connects them using advanced methods like cosine similarity. When you ask it a question, the chatbot explores the map to find the best answers. If the answer isn’t clear, it digs deeper, searching nearby ideas and adding more context until it finds a complete answer. This is like solving a puzzle—piece by piece, it builds the best possible response.
+                        Whether it’s for a kid curious about how a machine reads stories or an expert analyzing complex reports, GraphRAG bridges the gap between raw information and clear, thoughtful answers!
+
+                    </p>
+                </div>
+            </div>
+            <div class="page3-box projects">
+                <div class="item proj001">
+                    <div class="img">
+                        <img src="/static/img/portfolio/projects/CancerPrediction.png" alt="Cancer Predicition">
+                    </div>
+                    <h3>Cancer Prediction</h3>
+                    <a href="https://cancerprediction-j4wt7j.streamlit.app/" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+
+                <div class="item proj002">
+                    <div class="img">
+                        <img src="/static/img/portfolio/projects/ColdEmail.webp" alt="Cold Email">
+                    </div>
+                    <h3>Cold Email</h3>
+                    <a href="/coldemail" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+
+                <div class="item proj003">
+                    <div class="img">
+                        <img src="/static/img/portfolio/projects/Object-detection.png" alt="Object-detection">
+                    </div>
+                    <h3>Object-Detection</h3>
+                    <a href="/about" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+
+                <div class="item proj004">
+                    <div class="img">
+                        <img src="/static/img/portfolio/projects/chatbot.avif" alt="Chatbot">
+                    </div>
+                    <h3>ChatBot</h3>
+                    <a href="/chatbot" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
+                    
+                </div>
+            </div>
+            <div class="page3-box button projects-right-button"><i class="fa fa-angle-right" ></i></div>  
+        </section>  
+    </main>
+
+    <footer class="footer">
+        <div class="arrow-button" onclick="window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});"></div>
+        <div class="footer-container">
+            <div class="social-links">
+                <ul class="social-media">
+                    <a href="https://github.com/DebugJedi" target="_blank" rel="noopener noreferrer" ><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/priyank-rao/" target="_blank" rel="noopener noreferrer" ><i class="fa-brands fa-linkedin-in"></i></a>
+                </ul>
+            </div>
+            <div class="footer-menu">
+                <ul class="footer-links">
+                    <li><a class="home-button" href="/"> Home</a></li>
+                    <li><a class="about-button" href="/about" class="active"> About</a></li>
+                    <li><a class="portfolio-button" href="/portfolio"> Portfolio</a></li>
+                    <li><a class="contact-button" href="#page-2"> Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer> 
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
+    <script src="/static/js/portfolio.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link href="{{ url_for('static', path='css/portfolio.css') }}" rel="stylesheet">
+    <!-- Boxicons CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>    
+    
+</body>
+</html>

@@ -1,0 +1,12 @@
+.streamlit
+myapp/myenv
+.env
+rw.txt
+myapp/static/js/test.js
+myapp/static/img/test-img
+myapp/static/js/workexp.js
+myapp/static/js/aboutme.js
+static/svg/intro
+myapp/static/svg/aboutme
+__pycache__/
+__pycache__

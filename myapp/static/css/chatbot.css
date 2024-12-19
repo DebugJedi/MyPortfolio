@@ -1,0 +1,273 @@
+/* Google font poping */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap');
+@import url("https://unpkg.con/open-props");
+@import url("https://unpkg.com/open-props/normalize.min.css");
+
+*{
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /* ++ Measurement ++ */
+    --header-height: 90px;
+    --footer-height: 45px; 
+    --padding-heading: 5px;
+    /* color */
+    font-size: 16px;
+    --background-color: black;
+    --background-color1: white;
+    --text-color: white;
+    --from-bg-img-1: #804c22;
+    --from-bg-img-2: #855db6;
+    --from-bg-img-3: #c3cbd5;
+    --from-bg-img-4: #af7a35;
+    --from-bg-img-5: #2a2031;
+    --from-bg-img-6: #687887;
+    --from-bg-img-7: #98A0AF;
+    --from-bg-img-8: #375A77;
+    --from-bg-img-9: #433486;
+    --from-bg-img-10: #0E111B;
+    --from-bg-img-11: #221D2C;
+    --from-bg-img-12: #040813;
+    --from-bg-img-13:#3A2B46;
+    --from-bg-img-14: #E6A626;
+    --from-bg-img-15: #E4E7EC;
+    /* Transition */
+    --tran-02: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.4s ease;
+    --tran-05: all 0.5s ease;
+    --traneo-04: all 0.4s ease-in-out;
+    --background1: #264653;
+    --background2: #2e5767;
+    --background3: #34697e;
+    --background4: #478197;
+    --sidebar1-bg: #E9C46A;
+    --sidebar2-bg: #F4A261;
+    --sidebar3-bg: #F4A261;
+    --sidebar4-bg: #E76F51;
+    --separator-fill: #D8A25E;
+
+
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: var(--scroller-w);
+    border-radius: 10%;
+}
+  
+  /* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    width: var(--scroller-w);
+}
+  
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    width: 5px;
+}
+  
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    /* background-color: #6463a7; */
+    background-color: #F5BA92;
+}
+header {
+    padding: 0.5px;
+    text-align: center;
+    color: white;
+    background-image: url('https://images.newscientist.com/wp-content/uploads/2024/09/03195927/SEI_219952584.jpg');
+    background-size: cover;
+    background-position: center;
+}
+header h1 {
+    font-size: 2.5em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+.upload-container {
+    max-width: 40vw;  /* Adjust width as needed */
+    margin: 20px auto; /* Center the container */
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    background-color: #f9f9f9; /* Light background */
+    overflow: hidden;
+    overflow-y: hidden;
+  }
+  
+  .upload-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+
+  }
+  
+  #upload-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  #file-upload {
+    display: block; /* Make the default input visible */
+    margin-bottom: 20px;
+    background-color: #71838D;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+
+  }
+
+ #upload-button{
+  background-color: #ccc;
+  color: black;
+  padding: 10px;
+  border-radius: 5px;
+ }
+
+  #file-name {
+    visibility: hidden;
+  }
+  
+  #file-icon, .file-icon {
+    visibility: hidden;
+  }
+
+  .file-info{
+    background-color: #4CAF50;
+    color: black;
+  }
+  #query {
+    background-color: #d1e7fd;
+    color:  black;
+  }
+
+
+  .upload-button {
+    background-color: #007bff; /* Blue background color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor:   
+   pointer;
+    transition: background-color 0.3s ease; /* Smooth transition   
+   */
+  }
+  
+  .upload-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+  }
+  
+  .upload-message {
+    font-size: 14px;
+    font-weight: bold;
+}
+  /* .file-info {
+    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .file-icon {
+    font-size: 20px;
+    margin-right: 5px;
+  } */
+  
+#chat-container {
+  gap: 10px;
+  width: 60%;                 /* Set a width for the chat container */
+  max-width: 600px;           /* Optional max-width to control layout on larger screens */
+  margin: 0 auto;             /* Center align horizontally */
+  text-align: center;         /* Center align text and elements within */
+  padding: 20px;              /* Add some padding around the chat container */
+  border: 1px solid #ddd;     /* Optional border for visual separation */
+  border-radius: 8px;         /* Optional rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);  /* Optional shadow for a floating effect */
+}
+
+/* Additional styling for the form and response elements */
+#chat-container input[type="text"] {
+    width: 80%;                /* Makes the input take up most of the container width */
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#chat-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+#chat-container button:hover {
+    background-color: #45a049;
+}
+
+#response {
+    margin-top: 15px;
+    font-size: 18px;
+}
+#chat-history {
+    
+    width: 60vw; 
+    max-height: 60vh;
+    overflow-y: auto;
+    margin: 20px auto;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #f9f9f9;
+}
+
+.user-message, .bot-message {
+    margin: 20px;
+    padding: 5px;
+    border-radius: 4px;
+    max-width: 95%;
+}
+
+.user-message {
+    background-color: #d1e7fd;
+    align-self: flex-start;
+    text-align: right;
+    /* width: 80%; */
+}
+
+.bot-message {
+    background-color: #f1f0f0;
+    align-self: flex-start;
+    text-align: left;
+}
+#loading-spinner {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    z-index: 1000;
+}
+ 

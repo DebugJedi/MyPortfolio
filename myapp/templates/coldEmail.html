@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cold Email 📧</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    
+</head>
+<body>
+    
+    <div class="container">
+        <div class="header">
+            <img src="/static/img/coldEmail/Email-Generator.jpg" alt="ColdEmail">
+            <h3>📧 Email Generator</h3>
+        </div>  
+
+        <div class="form">
+            <div class="resume-container">
+                <div class="label-container">
+                    <label id="rs-upload-label" for="resume-upload">Resume/CV (PDF)</label>
+                </div>
+                <div class="input-container">
+                    <input type="file" id="resume-upload" accept=".pdf">
+                </div>
+            </div>
+
+            <div class="job-url-container">
+                <input type="text" id="job-url" placeholder="Enter a job URL." >
+            </div>
+
+            <button id="submit-button">Submit</button>
+        </div>
+
+        <div id="loading" style="display: none;">Wait for it....</div>
+        <div id="result"></div>
+    </div>
+    <script src="/static/js/coldEmail.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link href="{{ url_for('static', path='css/coldEmail.css') }}" rel="stylesheet">
+</body>
+</html>

@@ -1,0 +1,123 @@
+/* Google font poping */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap');
+
+*{
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /* ++ Measurement ++ */
+    --header-height: 90px;
+    --footer-height: 45px 
+    /* color */
+    font-size: 16px;
+    --background-color: black;
+    --background-color1: white;
+    --text-color: white;
+    --from-bg-img-1: #804c22;
+    --from-bg-img-2: #855db6;
+    --from-bg-img-3: #c3cbd5;
+    --from-bg-img-4: #af7a35;
+    --from-bg-img-5: #2a2031;
+    --from-bg-img-6: #687887;
+    --from-bg-img-7: #98A0AF;
+    --from-bg-img-8: #375A77;
+    --from-bg-img-9: #433486;
+    --from-bg-img-10: #0E111B;
+    --from-bg-img-11: #221D2C;
+    --from-bg-img-12: #040813;
+    --from-bg-img-13:#3A2B46;
+    --from-bg-img-14: #E6A626;
+    --from-bg-img-15: #E4E7EC;
+    /* Transition */
+    --tran-02: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.4s ease;
+    --tran-05: all 0.5s ease;
+    --traneo-04: all 0.4s ease-in-out;
+    --background1: #264653;
+    --background2: #2e5767;
+    --background3: #34697e;
+    --background4: #478197;
+    --separator-fill: #D8A25E;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: var(--scroller-w);
+    border-radius: 10%;
+}
+  
+  /* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    width: var(--scroller-w);
+}
+  
+  /* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    width: 5px;
+}
+  
+  /* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+body {
+
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color:#0E111B;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.header {
+    /* border:  white 2px solid; */
+    width: 100vw;
+    height: auto;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    object-fit: contain;
+    object-position: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.header img {
+    object-fit: cover;
+    object-position: center;
+    height: 30vh;
+}
+
+.form {
+    width: 100vw;
+    height: auto;
+    gap: 30px;
+    /* border: 1px dashed white; */
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    position: relative;
+}
+
+#result {
+    /* border: yellow 1px solid; */
+    width: 70vw;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10vw;
+    text-align: justify;
+}
+

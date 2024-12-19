@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+    <title>Its me Jedi</title>
+    
+    
+</head>
+<body>
+    <header class="header">
+        
+        <div class="h-box logo">            
+            <img src="{{ url_for('static', path='img/img5.png') }}" alt="logo">
+        </div>
+        
+        <div class="h-box logo-header">
+            <span class="name">MyLab</span>
+            <span class="profession">Data Science</span>
+        </div>
+
+        <nav class="h-box nav">
+            <ul class="nav-links">
+                <li><a class="home-button" href="/"> Home</a></li>
+                <li><a class="about-button" href="/about" class="active"> About</a></li>
+                <li><a class="portfolio-button" href="/portfolio"> Portfolio</a></li>
+                <li><a class="contact-button" href="#page-2"> Contact</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+
+    <main class="pages">
+        <section class="page-1">
+             <div class="box left-box">
+                
+                <div class="text-left heading">Hi, </div>
+                <div class="text-left heading2">It's</div>
+                <div class="text-left heading3">Debug Jedi</div>
+                <div class="text-left subheading">I am&nbsp;<span class="typing-wrapper"><span class="typing"></span></span></div> 
+
+            </div> 
+
+            <div class="box jedi-box">
+                
+                <img class="jedi" src="static/img/introsection/mandalorian-02.png" alt="">
+
+            </div>
+
+            <div class="box right-box">
+                <p class="aboutme-para1">
+                    Analyzing data and solving complex problems has been in my DNA for over six years, where I've transformed raw numbers into actionable insights that drive real results. From streamlining operations to building predictive models, I’ve honed my craft as a Business Analyst with a deep passion for innovation and impact.
+                </p>
+            </div>
+        </section>
+
+        <section class="page-2" id="page-2">
+            <div class="box heading">
+                <div class="head-container">
+                    
+                </div>
+            </div>
+            <div class="box top-right">
+                <h3>Have a great idea 💡</h3>    
+                <h1>Let's Work Together!</h1>
+            </div>
+            <div class="box bottom-left">
+                <div class="img">
+                    <img src="static/img/introsection/mandalorian-1.png">
+                </div>
+            </div>
+            <div class="box form-container">
+                <form id="contactForm" method="POST" action="https://connect.pabbly.com/workflow/sendwebhookdata/IjU3NjYwNTZkMDYzNTA0MzI1MjY4NTUzNzUxMzQi_pc"></form>
+                    <div class="form">
+                        <div class="form-heading">
+                            <h2>Contact</h2>
+                        </div>
+                        <div class="form-container">
+                            
+                            <input class="form-element" type="text" id="name" placeholder="Enter your name." required>
+                            
+                            <input class="form-element" type="text" id="email" placeholder="Enter email." required>
+                            
+                            <textarea class="form-element" id="message" name="message" placeholder="Leave a message." required></textarea>
+                        </div>
+                        <div class="form-element">
+                            <button id="send-button" type="submit">Send</button>
+                        </div>
+                        
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="arrow-button" onclick="window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});"></div>
+        <div class="footer-container">
+            <div class="social-links">
+                <ul class="social-media">
+                    <a href="https://github.com/DebugJedi" target="_blank" rel="noopener noreferrer" ><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/priyank-rao/" target="_blank" rel="noopener noreferrer" ><i class="fa-brands fa-linkedin-in"></i></a>
+                </ul>
+            </div>
+            <div class="footer-menu">
+                <ul class="footer-links">
+                    <li><a class="home-button" href="/"> Home</a></li>
+                    <li><a class="about-button" href="/about" class="active"> About</a></li>
+                    <li><a class="portfolio-button" href="/portfolio"> Portfolio</a></li>
+                    <li><a class="contact-button" href="#page-2"> Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
+    <script src="/static/js/introScript.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link href="{{ url_for('static', path='css/introStyle.css') }}" rel="stylesheet">
+    <!-- Boxicons CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>    
+    
+</body>
+</html>

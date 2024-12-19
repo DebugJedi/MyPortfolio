@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Orbitron:wght@400..900&family=Protest+Revolution&display=swap" rel="stylesheet">
+    <title>About</title>
+ 
+</head>
+<body>
+    <div class="about">
+        <nav class="container top-banner">
+            <span class="scroll-watcher"></span>
+            <div class="image-text">
+                <div class="image">
+                    <img src="{{ url_for('static', path='img/img5.png') }}" alt="logo">
+                </div>
+                <div class="header-text">
+                    <span class="name">MyLab</span>
+                    <span class="profession">Data Science</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a class="home-button" href="/"> Home</a></li>
+                    <li><a class="about-button" href="/about" class="active"> About</a></li>
+                    <li><a class="portfolio-button" href="#"> Portfolio</a></li>
+                    <li><a class="contact-button" href="#contact"> Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+         
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
+    <script src="/static/js/aboutme.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link href="{{ url_for('static', path='css/aboutme.css') }}" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>    
+</body>
+</html>
