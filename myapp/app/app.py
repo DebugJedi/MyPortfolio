@@ -12,10 +12,18 @@ from typing import Dict
 from src.generator import emailGenerator
 import os 
 from dotenv import load_dotenv
+from fastapi.middleware.trustedhost import TrustedHostMiddleware
+from starlette.middleware.httpsredirect import HTTPSRedirectMiddleware
 
 app = FastAPI()
 
 load_dotenv()
+
+# Redirect all HTTP traffic to HTTPS
+app.add_middleware(HTTPSRedirectMiddleware)
+
+# Optionally, enforce trusted hosts
+app.add_middleware(TrustedHostMiddleware, allowed_hosts=["*"])
 
 
 # Mount static files for serving assets (CSS, JS, etc.)
@@ -27,6 +35,8 @@ app.mount(
 
 # Set up templates for HTML rendering
 templates = Jinja2Templates(directory="templates")
+
+
 
 async def get_graph_rag():
     graph_rag = getattr(app.state, "graphrag", None)
@@ -130,4 +140,4 @@ async def post_message(payload: dict = Body(...)):
 if __name__ == "__main__":
     
     import uvicorn
-    uvicorn.run(app, host="127.0.0.1", port=8000)
+    uvicorn.run(app, host="0.0.0.0", port=8080)

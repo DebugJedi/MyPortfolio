@@ -1,0 +1,30 @@
+steps:
+  #build the docker image
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'us-west1-docker.pkg.dev/$PROJECT_ID/$REPO_NAME/$SERVICE_NAME', '.']
+
+  # PUSH THE DOCKER IMAGE TO ARTIFACT REGISTRY
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'us-west1-docker.pkg.dev/$PROJECT_ID/$REPO_NAME/$SERVICE_NAME']
+
+  # DEPLOY THE IMAGE TO CLOUD RUN
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: 'gcloud'
+    args:
+      - 'run'
+      - 'deploy'
+      - '$SERVICE_NAME'
+      - '--image'
+      - 'us-west1-docker.pkg.dev/$PROJECT_ID/$REPO_NAME/$SERVICE_NAME'
+      - '--platform'
+      - 'managed'
+      - '--region'
+      - 'us-west1'
+      - '--allow-unauthenticated'
+
+substitutions:
+  _PROJECT_ID: "myportfolio-445218"
+  _REPO_NAME: "portfolio"
+  _SERVICE_NAME: "myportfolio-app"
+
+timeout: '1200s'

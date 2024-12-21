@@ -1,4 +1,5 @@
 scikit-learn
+# streamlit
 networkx
 nltk
 futures
@@ -7,7 +8,7 @@ numpy
 # tqdm
 matplotlib
 typing
-streamlit-chat
+# streamlit-chat
 pypdf
 openai
 langchain-community
@@ -96,3 +97,4 @@ yarl==1.12.1
 streamlit-shadcn-ui==0.1.18
 PyPDF2
 beautifulsoup4
+starlette
