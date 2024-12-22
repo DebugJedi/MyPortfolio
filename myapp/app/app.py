@@ -12,18 +12,10 @@ from typing import Dict
 from src.generator import emailGenerator
 import os 
 from dotenv import load_dotenv
-from fastapi.middleware.trustedhost import TrustedHostMiddleware
-from starlette.middleware.httpsredirect import HTTPSRedirectMiddleware
 
 app = FastAPI()
 
 load_dotenv()
-
-# Redirect all HTTP traffic to HTTPS
-app.add_middleware(HTTPSRedirectMiddleware)
-
-# Optionally, enforce trusted hosts
-app.add_middleware(TrustedHostMiddleware, allowed_hosts=["*"])
 
 
 # Mount static files for serving assets (CSS, JS, etc.)
