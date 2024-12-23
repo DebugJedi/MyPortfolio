@@ -12,12 +12,12 @@ from typing import Dict
 from src.generator import emailGenerator
 import os 
 from dotenv import load_dotenv
-from fastapi.middleware.httpsredirect import HTTPSRedirectMiddleware
+# from fastapi.middleware.httpsredirect import HTTPSRedirectMiddleware
 
 
 
 app = FastAPI()
-app.add_middleware(HTTPSRedirectMiddleware)
+# app.add_middleware(HTTPSRedirectMiddleware)
 load_dotenv()
 
 
