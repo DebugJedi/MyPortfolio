@@ -16,6 +16,9 @@ class App {
 
     
     console.log("JavaScript is working!");
+    this.footer = document.querySelector("footer");
+    this.arrowButton = document.getElementById("arrow-button");
+    this.footerVisible = false;
     this._initialize();
     this._render();
 
@@ -25,12 +28,36 @@ class App {
  
 
   _initialize() {
+    this._setupFooterToogel();
     this._pageloader();
     this._initalanimation();
     this._createLenis();
     this._trigger();
     
     // this._startTypingEffect();
+  }
+
+  _setupFooterToogel() {
+    this.arrowButton.addEventListener("click", () =>{
+      this.footerVisible = !this.footerVisible;
+
+      if(this.footerVisible) {
+        this.footer.style.height = "50px";
+        this.arrowButton.innerHTML = "&#x2193;";
+
+        setTimeout(() => {
+          window.scrollTo({
+            top: document.body.scrollHeight,
+            behavior: "smooth", // Smooth scrolling
+          });
+        }, 100);
+      } else {
+        this.footer.style.height = "0px";
+        this.arrowButton.innerHTML = "&#x2191;";
+      }
+      
+
+    });
   }
 
   _pageloader() {
@@ -131,7 +158,7 @@ class App {
         console.log("Payload: ", payload);
 
         // Send data to FastAPI backend
-        fetch("http://127.0.0.1:8000/post/message", {
+        fetch("/post/message", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

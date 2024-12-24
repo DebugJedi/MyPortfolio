@@ -6,6 +6,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 
 :root{
@@ -43,6 +44,12 @@
     --background3: #34697e;
     --background4: #478197;
     --separator-fill: #D8A25E;
+    /* font-sizes */
+
+    --fs-xl: 5rem;
+    --fs-600: 1.5rem;
+    --fs-500: 1.25rem;
+    --fs-400: 1rem;
 }
 
 /* width */
@@ -68,19 +75,23 @@
     background: #555;
 }
 
+/* body > * {
+    border: 1px solid white;
+} */
+
 body {
-    
+    font-size: 1rem;
     background-color: black;
     color: white;
     font-family: "Roboto", sans-serif;
-    min-height: 100vh;
     display: grid;
-    grid-template-rows: var(--header-height) auto 45px;
+    grid-template-rows: var(--header-height) auto auto auto;
     grid-template-columns: repeat(9, 1fr);
-    grid-auto-rows: 90px auto 45px;
+    /* grid-auto-rows: 90px auto 45px; */
     grid-template-areas:
         "hd hd hd hd hd hd hd hd hd"
         "mn mn mn mn mn mn mn mn mn"
+        "ar ar ar ar ar ar ar ar ar"
         "ft ft ft ft ft ft ft ft ft";
     gap: 0rem;
 }
@@ -89,11 +100,10 @@ body {
 
 .header {
     position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1000;
+    z-index: 1000; 
     width: 100%;
-    
+    margin-inline: auto;
+    /* max-height:  var(--header-height) ; */
     display: grid;
     grid-area: hd;
     grid-template-columns: 100px 2fr 1fr;
@@ -114,9 +124,11 @@ body {
 }
 
 .h-box:first-child img {
-    width: 90%;
-    height: 90%;
+    width: 80%;
+    height: 80%;
     border-radius: 10%;
+    margin-inline: auto;
+    margin-block: auto;
 }
 
 .h-box:nth-child(2) {
@@ -167,11 +179,15 @@ body {
     
 }
 
+/* main > * {
+    border: 1px solid orange;
+} */
+
 main {
     grid-area: mn;
     background-color: black;
     color: white;
-    padding: 20px;
+    
     grid-template-rows: repeat(2, 100vh);
 }
 
@@ -185,6 +201,7 @@ main {
     max-width: 100vw;
     grid-gap: 10px;
     height: calc(100vh - var(--header-height));
+
 }
 
 .page-1 .box:first-child {
@@ -329,52 +346,46 @@ main {
     height: 35px;
     width: 100%;
     background: var(--from-bg-img-4)  ; 
-    
     cursor: pointer;
     position: relative;
 }
 
+.arrow-section {
+    width: 100%;
+    height: 0px;
+    grid-area: ar;
+    position: relative;
+    
+}
 
-/* Arrow button style */
 .arrow-button {
-    position: absolute;
-    top: -25px; /* Adjusts to make it half-overlap the footer */
-    left: 50%;
-    transform: translateX(-50%);
+    cursor: pointer;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 50px;
     height: 50px;
-    background-color: transparent;
-    border-radius: 50%; /* Makes it circular */
-    box-shadow: 0 2px 5px rgba(0.2px, 0.2px, 1px, 1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    z-index: 10; /* Ensures visibility above other content */
-    margin-top: -35px;
+    background-color: #333;
+    color: #fff;
+    position: absolute;
+    bottom: 20px; 
+    left: 50%;
+    z-index: 1000;
+    object-position: center;
+    border-radius: 50%;
     
-}
+  }
 
-/* Upward arrow */
-.arrow-button::before {
-    content: "";
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    border-left: 3px solid yellow; /* Left part of the arrow */
-    border-bottom: 3px solid yellow; /* Bottom part of the arrow */
-    transform: rotate(135deg); /* Rotates to create an upward arrow */
-    
-}
 
 /* Footer container */
 .footer {
     grid-area: ft;
-    height: var(--footer-height);
+    height: 0px;
     position: relative; /* Allows positioning of the arrow button */
-    /* background-color: #f1f1f1; Example footer background */
+    
     background-color: transparent;
-    overflow: visible; /* Ensures the arrow doesn't get hidden */
+    overflow: hidden; /* Ensures the arrow doesn't get hidden */
 }
 
 /* Footer links */
