@@ -116,7 +116,7 @@ body {
 .header .logo {
     display: flex;
     position: relative;
-    min-width: 90px;    
+    max-width: 90px;    
     height: 100%;
     object-fit: contain;
     border-radius: 10%;
@@ -559,9 +559,9 @@ main {
         margin-block-start: 50px;
     } 
 
-    .page-2 > * {
+    /* .page-2 > * {
         border: yellow 1px solid;
-    }
+    } */
     
     .page-2 {
         display: grid;
