@@ -1,0 +1,14 @@
+
+/static/img/test-img
+/static/js/workexp.js
+/static/js/aboutme.js
+static/svg/intro
+/static/svg/aboutme
+__pycache__/
+__pycache__
+/myenv
+.env
+rw.txt
+myapp/app/static/img/test-img
+myapp/app/static/js/test.js
+myapp/app/static/svg/aboutme

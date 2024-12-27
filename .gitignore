@@ -11,3 +11,4 @@ static/svg/aboutme
 __pycache__/
 __pycache__
 .gitignore
+src/visualizer.py

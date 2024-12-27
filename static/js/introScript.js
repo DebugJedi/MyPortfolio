@@ -106,7 +106,7 @@ class App {
 
     
     ScrollReveal().reveal('.jedi',      {easing: 'ease-in', delay: 20, origin: "left" });
-    ScrollReveal().reveal('.left-box',  {easing: 'ease-in', delay: 20  , origin: "bottom" });
+    // ScrollReveal().reveal('.left-box',  {easing: 'ease-in', delay: 20  , origin: "bottom" });
     // ScrollReveal().reveal('.right-box', {easing: 'ease-in', delay: 20  , origin: "top" });
 
   }
@@ -138,7 +138,9 @@ class App {
   
   _trigger() {
     console.log("Starting contact.js...");
-
+    const navEl = document.querySelector('nav');
+    const hamburgerEl = document.querySelector('.hamburger');
+    
     document.getElementById("send-button").addEventListener("click", function (event) {
         event.preventDefault();
         console.log("Clicked the send button...");
@@ -147,7 +149,7 @@ class App {
         const name = document.getElementById("name").value;
         const email = document.getElementById("email").value;
         const message = document.getElementById("message").value;
-
+        
         // Validate form data
         if (!name || !email || !message) {
             alert("Please fill in all fields.");
@@ -186,6 +188,16 @@ class App {
                 alert("There was an error submitting the form. Please try again.");
         });
 });
+
+  hamburgerEl.addEventListener("click",() =>{
+    navEl.classList.toggle('nav--open');
+    hamburgerEl.classList.toggle('hamburger--open');
+  });
+
+  navEl.addEventListener("click",() =>{
+    navEl.classList.remove('nav--open');
+    hamburgerEl.classList.remove('hamburger--open');
+  });
 
   }
 
