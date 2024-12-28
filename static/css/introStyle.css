@@ -550,6 +550,11 @@ main {
         display: block;
     }
     /* ++++++Page-01+++++++ */
+    
+    .page-1 > * {
+        border: 1px dashed yellow;
+    }
+
     .page-1 {
         display: flex;
         position: relative;
