@@ -287,6 +287,8 @@ main {
 
 /* ++++ Page-2 ++++ */
 
+
+
 .page-2 {
     background-color: var(--from-bg-img-11);
     display: grid;
@@ -457,7 +459,7 @@ main {
 }
 
 
-@media (max-width: 400px) {
+@media (max-width: 420px) {
     :root {
         --fs-xl: 1.5rem;
         --fs-600: 1rem;
@@ -519,6 +521,7 @@ main {
         max-height: auto;
         flex-direction: column;
         padding: 0;
+        height: calc( 100 - var(--header-height));
     }
 
     .page-1 .box:first-child {
@@ -559,87 +562,38 @@ main {
         margin-block-start: 50px;
     } 
 
-    /* .page-2 > * {
+    .page-2 > * {
         border: yellow 1px solid;
-    } */
+    }
     
     .page-2 {
-        display: grid;
-        grid-area: mn;
-        grid-template-columns: 1fr 2fr;
-        grid-template-rows: 1fr 3fr;
-        gap: 10px;
-        overflow: hidden;
-    }
-    
-    .page-2 .box:nth-child(2) {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align:center;
-        font-size: var(--fs-300);
-    }
-    
-    .page-2 .box:nth-child(3) {
-        display: flex;
-        position: relative;
-    }
-    
-   
-    
-    .page-2 .box:nth-child(4)  {
-        padding: 40px;
-        border-radius: 20px;
-        padding-inline: 50px;
-        position: relative;
-        justify-content: center;
-        align-items: center;
-        background-color: gray;
-        height: 70%;
-    }
-    
-    .page-2 .box:nth-child(4) .form {
-        
-        
-        gap: 10px;
-        padding-block: 5px;
-        height: 90%;
-        width: 90%;
-    }
-    
-    
-    
-    .page-2 .box:nth-child(4) .form-heading {
-        text-align: center;
-        font-size: var(--fs-300);
-        padding-block-end: 20px;
-    }
-    
-    .page-2 .box:nth-child(4) .form-container {
-        padding: 35px;
         display: flex;
         flex-direction: column;
-        height: 100%;
-        gap: 20px;
-        position: relative;
-        
+        grid-area: mn;
+        gap: 10px;
+        overflow: hidden;
+        height: calc( 100dvh - var(--header-height));
     }
     
-    .page-2 .box:nth-child(4) [type="text"] {
-        height: 35px;
+    .page-2 .box:nth-child(1) {
+        display: none;
     }
+
+   .page-2 .box:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+
+   }
+   .page-2 .box:nth-child(3) {
+    display: none;
+   }
+
+   .page-2 .box:nth-child(4){
+    margin-inline: auto;
+    width: 80%;
+   }
+   
     
-    .page-2 .box:nth-child(4) [name="message"] {
-        height: 110px;
-    }
-    
-    .page-2 .box:nth-child(4) .form-element button {
-        height: 35px;
-        width: 100%;
-        background: var(--from-bg-img-4)  ; 
-        cursor: pointer;
-        position: relative;
-    }
     
 
 }
