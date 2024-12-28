@@ -476,8 +476,23 @@ main {
     text-decoration: none;
 }
 
+@media (max-width: 420px) and (orientation: landscape) {
+    body {
+        display: none;
+    }
+    .landscape-message {
+        display: block;
+        text-align: center;
+        padding: 20px;
+        font-size: 1.2rem;
+        color: #333;
+    }
+}
 
-@media (max-width: 420px) {
+@media (max-width: 420px) and (orientation: portrait){
+    body {
+        display: block;
+    }
     :root {
         --fs-xl: 1.5rem;
         --fs-600: 1rem;
