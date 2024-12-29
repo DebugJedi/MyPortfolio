@@ -416,23 +416,21 @@ main {
 .footer {
     grid-area: ft;
     height: 0px;
-    position: relative; /* Allows positioning of the arrow button */
-    
+    position: relative; 
     background-color: transparent;
-    overflow: hidden; /* Ensures the arrow doesn't get hidden */
+    overflow: hidden; 
 }
 
 /* Footer links */
 .footer-container {
     display: flex;
     justify-content: flex-end;
-    
 }
 .footer-menu {
     display: flex;
     justify-content: flex-end;
     width: 100%;
-    border: 1px dashed white;
+    /* border: 1px dashed white; */
 }
 
 .social-links {
@@ -622,7 +620,16 @@ main {
     display: flex;
     justify-content: flex-end;
     width: 100%;
-    border: 1px dashed white;
+    padding-inline-end: 5px;
+    
+    /* border: 1px dashed white; */
+}
+
+.footer-links a {
+    color: white;
+    /* border: 1px dashed orange; */
+    text-decoration: none;
+    column-gap: 2px;
 }
 
 }
