@@ -42,7 +42,7 @@ class App {
       this.footerVisible = !this.footerVisible;
 
       if(this.footerVisible) {
-        this.footer.style.height = "50px";
+        this.footer.style.height = "70px";
         this.arrowButton.innerHTML = "&#x2193;";
 
         setTimeout(() => {

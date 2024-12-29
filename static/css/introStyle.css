@@ -116,7 +116,7 @@ body {
     height: var(--header-height);
     background-color: var(--header-bg-color);
     top: 0;
-    border: 1px solid orange;
+    
 }
 
 .header .logo {
@@ -327,11 +327,6 @@ main {
     
 }
 
-/* .page-2 > *{
-    border: 1px solid white;
-} */
-
-
 
 .page-2 .box:nth-child(4)  {
     padding: 40px;
@@ -345,9 +340,6 @@ main {
     height: calc(var(--form-height) + 10vh)
 }
 
-/* .page-2 .box:nth-child(4) .form > * {
-    border: 1px dashed darkorange;
-} */
 
 .page-2 .box:nth-child(4) .form {
     display: grid;
@@ -357,7 +349,6 @@ main {
     align-items: center;
     height: var(--form-height);
     width: 100%;
-    /* border: 1px solid yellow; */
 }
 
 .page-2 .box:nth-child(4) .form-container {
@@ -367,8 +358,6 @@ main {
     height: 100%;
     gap: 20px;
     position: relative;
-    
-    
 }
 
 .page-2 .box:nth-child(4) [type="text"] {
@@ -391,7 +380,6 @@ main {
 }
 
 .page-2 .box:nth-child(4) .form-heading {
-    
     padding-block-start: 2vh;
     color: #fff;
     text-align: center;
@@ -399,9 +387,12 @@ main {
 
 .arrow-section {
     width: 100%;
-    height: 0px;
+    height: 10dvh;
     grid-area: ar;
-    position: relative;   
+    display: flex;
+    position: relative;  
+    justify-content: center;
+    align-items: center;
 }
 
 .arrow-button {
@@ -414,11 +405,8 @@ main {
     height: 50px;
     background-color: #333;
     color: #fff;
-    position: absolute;
-    bottom: 20px; 
-    left: 50%;
+    position: relative;
     z-index: 1000;
-    object-position: center;
     border-radius: 50%;
     transition: var(--traneo-04);
   }
@@ -437,13 +425,14 @@ main {
 /* Footer links */
 .footer-container {
     display: flex;
-    /* justify-content: flex-end; */
-    padding-right: 45px;
+    justify-content: flex-end;
+    
 }
 .footer-menu {
     display: flex;
     justify-content: flex-end;
     width: 100%;
+    border: 1px dashed white;
 }
 
 .social-links {
@@ -490,9 +479,7 @@ main {
 }
 
 @media (max-width: 420px) and (orientation: portrait){
-    body > * {
-        border:  1px solid white;
-    }
+   
     body {
         display: block;
     }
@@ -552,9 +539,7 @@ main {
     }
     /* ++++++Page-01+++++++ */
     
-    .page-1 > * {
-        border: 1px dashed yellow;
-    }
+   
 
     .page-1 {
         display: flex;
@@ -605,9 +590,7 @@ main {
         margin-block-start: 50px;
     } 
 
-    .page-2 > * {
-        border: yellow 1px solid;
-    }
+ 
     
     .page-2 {
         display: flex;
@@ -615,7 +598,6 @@ main {
         grid-area: mn;
         gap: 10px;
         overflow: hidden;
-        
     }
     
     .page-2 .box:nth-child(1) {
@@ -635,8 +617,12 @@ main {
     margin-inline: auto;
     width: 80%;
    }
-   
-    
-    
+
+   .footer-menu {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    border: 1px dashed white;
+}
 
 }
