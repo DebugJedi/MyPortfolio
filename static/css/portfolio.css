@@ -125,23 +125,22 @@ body > * {
     z-index: 10;
     width: 100%;
     height: var(--header-height);
-    background-color: var(--header-bg-color);
+    background-color: var(--from-bg-img-4);
     top: 0;
-    
 }
 
 .header .logo {
     display: flex;
     position: relative;
     max-width: 90px;    
-    height: 100%;
+    
     object-fit: contain;
     border-radius: 10%;
 }
 
 .header .logo img {
     width: 80%;
-    height: 70%;
+    height: 60%;
     border-radius: 10%;
     margin-inline: auto;
     margin-block: auto;
@@ -686,8 +685,11 @@ li .stars {
     grid-area: ft;
     height: 0px;
     position: relative; 
-    background-color: transparent;
+    background-color: var(--from-bg-img-5);
     overflow: hidden; 
+    align-items: center;
+    justify-content: center;
+    padding-block-start: 10px;
 }
 
 /* Footer links */
@@ -699,6 +701,7 @@ li .stars {
     display: flex;
     justify-content: flex-end;
     width: 100%;
+    padding-inline-end: 20px;
     /* border: 1px dashed white; */
 }
 
@@ -755,7 +758,7 @@ li .stars {
     .header {
         display: flex;
         position: fixed;
-        background-color: var(--header-bg-color);
+        background-color: var(--from-bg-img-4);
         top: 0;
     }
     .nav--open {
@@ -799,9 +802,6 @@ li .stars {
         margin-block-start: var(--header-height);
     }
     
-    /* .page-1  > * {
-        border: 3px solid white;
-    } */
 
     .page-1 {
         display: flex;
@@ -817,19 +817,20 @@ li .stars {
         width: 100vw;
         display: flex;
         flex-direction: column;
-        gap: 10px;
+        
     }
 
-    .page-1 .left-section {
+    .page-1 .container {
         border: 1px dashed orangered;
-        height: 100dvh;
+        min-height: 100dvh;
         width: 90dvw;
-        display: flex;
-        flex-direction: column;
+        display: grid;
+        margin-inline: 20px;
+
     }
 
-    .page-1 .left-section .skill {
-        border: yellow 1px solid;
+    .page-1 .skill {
+        
         align-items: center;
         justify-content: center;
         width: auto;
@@ -839,20 +840,20 @@ li .stars {
         height: 55px;
     }
 
-    .page-1 .left-section .skill .skill-name {
-       padding-block-end: 20px;
+    .page-1 .skill .skill-name {
+       padding-block-end: 15px;
+       display: flex;
+       width: 100%;
+       padding-inline-start: 5vw;
         
     }
 
-    .page-1 .left-section .skill .stars{
+    .page-1 .skill .stars{
         display: flex;
-        flex-direction: column;
+        bottom:10px;
+        left: 0;
     }
-
-    .page-1 .right-section {
-        display: none;
-    }
-
+    
    .footer-menu {
     display: flex;
     justify-content: flex-end;
