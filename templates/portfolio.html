@@ -7,12 +7,13 @@
     <script src="https://unpkg.com/scrollreveal"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
     <title>Portfolio</title>
-    <!-- <link href="{{ url_for('static', path='css/portfolio.css') }}" rel="stylesheet"> -->
-    <link rel="stylesheet" href="https://myportfolio-95815450908.us-west1.run.app/static/css/portfolio.css">
+    <link href="{{ url_for('static', path='css/portfolio.css') }}" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://myportfolio-95815450908.us-west1.run.app/static/css/portfolio.css"> -->
     
 
 </head>
 <body>
+    <!-- new -->
     <header class="header">
         
         <div class="h-box logo">            
@@ -25,7 +26,7 @@
         </div>
 
         <nav class="h-box nav">
-            <ul class="nav-links">
+            <ul class="nav__links">
                 <li><a class="home-button" href="#skills">Skills</a></li>
                 <li><a class="about-button" href="#achievements" class="active">Achievements</a></li>
                 <li><a class="portfolio-button" href="#projects">Projects</a></li>
@@ -33,105 +34,112 @@
             </ul>
         </nav>
         
+        <div class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
     </header>
+
+    
 
     <main class="pf-pages">
         <section class="page page-1" id="skills">
             <h3 class="h3 el">SKILLS</h3>
-            
-            <ul class="left-section el">
+            <div class="content el">
+                <ul class="left-section">
+                    
+                    <li class="cat-heading">Programming</li>
+                    <li class="skill">
+                        <span class="skill-name">Python</span>
+                        <div class="stars">
+                            <span class="five-star"></span>
+                        </div>
+                    </li>
+                        
+                    <li class="skill">
+                        <span class="skill-name">R</span>
+                        <div class="stars">
+                            <span class="three-star"></span>
+                        </div>
+                    </li>
+
+                    <li class="skill">
+                        <span class="skill-name">SQL</span>
+                        <div class="stars">
+                            <span class="four-star"></span>
+                        </div>
+                    </li>
                 
-                <li class="cat-heading">Programming</li>
-                <li class="skill">
-                    <span class="skill-name">Python</span>
-                    <div class="stars">
-                        <span class="five-star"></span>
-                    </div>
-                </li>
-                    
-                <li class="skill">
-                    <span class="skill-name">R</span>
-                    <div class="stars">
-                        <span class="three-star"></span>
-                    </div>
-                </li>
+                    <li class="skill">
+                        <span class="skill-name">JavaScript</span>
+                        <div class="stars">
+                            <span class="three-star"></span>
+                        </div>
+                    </li>
 
-                <li class="skill">
-                    <span class="skill-name">SQL</span>
-                    <div class="stars">
-                        <span class="four-star"></span>
-                    </div>
-                </li>
-               
-                <li class="skill">
-                    <span class="skill-name">JavaScript</span>
-                    <div class="stars">
-                        <span class="three-star"></span>
-                    </div>
-                </li>
+                    <li class="skill">
+                        <span class="skill-name">HTML</span>
+                        <div class="stars">
+                            <span class="three-star"></span>
+                        </div>
+                    </li>
 
-                <li class="skill">
-                    <span class="skill-name">HTML</span>
-                    <div class="stars">
-                        <span class="three-star"></span>
-                    </div>
-                </li>
+                    <li class="skill">
+                        <span class="skill-name">CSS</span>
+                        <div class="stars">
+                            <span class="three-star"></span>
+                        </div>
+                    </li>
 
-                <li class="skill">
-                    <span class="skill-name">CSS</span>
-                    <div class="stars">
-                        <span class="three-star"></span>
-                    </div>
-                </li>
+                    <li class="skill">
+                        <span class="skill-name">Jenkins</span>
+                        <div class="stars">
+                            <span class="four-star"></span>
+                        </div>
+                    </li>
 
-                <li class="skill">
-                    <span class="skill-name">Jenkins</span>
-                    <div class="stars">
-                        <span class="four-star"></span>
-                    </div>
-                </li>
+                    <li class="skill">
+                        <span class="skill-name">YAML</span>
+                        <div class="stars">
+                            <span class="three-star"></span>
+                        </div>
+                    </li>
 
-                <li class="skill">
-                    <span class="skill-name">YAML</span>
-                    <div class="stars">
-                        <span class="three-star"></span>
-                    </div>
-                </li>
+                    <li class="skill">
+                        <span class="skill-name">Machine Learning</span>
+                        <div class="stars">
+                            <span class="four-star"></span>
+                        </div>
+                    </li>
 
-                <li class="skill">
-                    <span class="skill-name">Machine Learning</span>
-                    <div class="stars">
-                        <span class="four-star"></span>
-                    </div>
-                </li>
+                    <li class="cat-heading">Statistical Analysis</li>
+                        
+                    <li class="skill">
+                        <span class="skill-name">Hypothesis Analysis</span>
+                        <div class="stars">
+                            <span class="four-star"></span>
+                        </div>
+                    </li>
 
-                <li class="cat-heading">Statistical Analysis</li>
-                    
-                <li class="skill">
-                    <span class="skill-name">Hypothesis Analysis</span>
-                    <div class="stars">
-                        <span class="four-star"></span>
-                    </div>
-                </li>
+                    <li class="skill">
+                        <span class="skill-name">A/B Testing</span>
+                        <div class="stars">
+                            <span class="four-star"></span>
+                        </div>
+                    </li>
 
-                <li class="skill">
-                    <span class="skill-name">A/B Testing</span>
-                    <div class="stars">
-                        <span class="four-star"></span>
-                    </div>
-                </li>
+                    <li class="skill">
+                        <span class="skill-name">Time Series Analysis</span>
+                        <div class="stars">
+                            <span class="four-star"></span>
+                        </div>
+                    </li>
 
-                <li class="skill">
-                    <span class="skill-name">Time Series Analysis</span>
-                    <div class="stars">
-                        <span class="four-star"></span>
-                    </div>
-                </li>
+            
+                </ul>
 
-          
-            </ul>
-
-            <ul class="right-section el">
+                <ul class="right-section">
                 
                 
                 <li class="cat-heading">Critical Thinking</li>
@@ -226,7 +234,8 @@
 
             
 
-            </ul>   
+                </ul>
+            </div>   
         </section>
 
         <section class="page page-2" id="achievements">
@@ -365,7 +374,7 @@
             
             <div class="page3-box left-section">
                 <div class="desc desc001">
-                    <h3>Project Overview: Breast Cancer Prediction using Neural Networks</h3>
+                    <h3>Breast Cancer Prediction using Neural Networks</h3>
                     <p>
                         This project aims to build a predictive model to classify breast cancer tumors as either malignant (M) or benign (B) based on various features derived from cell measurements. The model utilizes a neural network (NN) architecture for binary classification, leveraging a dataset of features that describe the characteristics of cell nuclei in breast cancer biopsies. The final goal is to predict whether a tumor is malignant or benign based on these measurements, helping medical professionals make informed decisions about treatment.
                         
@@ -440,8 +449,13 @@
         </section>  
     </main>
 
+    <div class="arrow-section">
+       
+        <button id="arrow-button" class="arrow-button">&#x2191;</button>
+    </div>
+
     <footer class="footer">
-        <div class="arrow-button" onclick="window.scrollTo({top: document.body.scrollHeight, behavior: 'smooth'});"></div>
+        
         <div class="footer-container">
             <div class="social-links">
                 <ul class="social-media">
@@ -458,7 +472,7 @@
                 </ul>
             </div>
         </div>
-    </footer> 
+    </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>

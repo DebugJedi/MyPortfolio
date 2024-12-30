@@ -1,3 +1,8 @@
+const navEl = document.querySelector('nav');
+const hamburgerEl = document.querySelector('.hamburger');
+const footer = document.querySelector("footer");
+const arrowButton = document.getElementById("arrow-button");
+let footerVisible = false;
 
 document.addEventListener('DOMContentLoaded', function () {
     const leftButton = document.querySelector('.page-2 .left-button i');
@@ -86,3 +91,37 @@ document.addEventListener("DOMContentLoaded", () => {
     projectsContainer.addEventListener("wheel", disableManualScroll, { passive: false });
     projectsContainer.addEventListener("touchmove", disableManualScroll, { passive: false });
 });
+
+
+console.log("Currently fotter visibility: ", footerVisible)
+
+arrowButton.addEventListener("click", () =>{
+    footerVisible = !footerVisible;
+
+    if(footerVisible) {
+        console.log("Currently fotter visibility: ", footerVisible)
+        footer.style.height = "70px";
+        arrowButton.innerHTML = "&#x2193;";
+
+    setTimeout(() => {
+        window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: "smooth", // Smooth scrolling
+        });
+    }, 100);
+    } else {
+    footer.style.height = "0px";
+    arrowButton.innerHTML = "&#x2191;";
+    }
+});
+
+
+hamburgerEl.addEventListener("click",() =>{
+    navEl.classList.toggle('nav--open');
+    hamburgerEl.classList.toggle('hamburger--open');
+  });
+
+  navEl.addEventListener("click",() =>{
+    navEl.classList.remove('nav--open');
+    hamburgerEl.classList.remove('hamburger--open');
+  });
