@@ -7,8 +7,8 @@
     <script src="https://unpkg.com/scrollreveal"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
     <title>Portfolio</title>
-    <!-- <link href="{{ url_for('static', path='css/portfolio.css') }}" rel="stylesheet"> -->
-    <link rel="stylesheet" href="https://myportfolio-95815450908.us-west1.run.app/static/css/portfolio.css">
+    <link href="{{ url_for('static', path='css/portfolio.css') }}" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://myportfolio-95815450908.us-west1.run.app/static/css/portfolio.css"> -->
     
 
 </head>
@@ -27,6 +27,7 @@
 
         <nav class="h-box nav">
             <ul class="nav__links">
+                <li><a class="home-button" href="/"> Home</a></li>
                 <li><a class="home-button" href="#skills">Skills</a></li>
                 <li><a class="about-button" href="#achievements" class="active">Achievements</a></li>
                 <li><a class="portfolio-button" href="#projects">Projects</a></li>
@@ -240,11 +241,11 @@
 
         <section class="page page-2" id="achievements">
             
-            <div class="top"> Recent Courses & Certificates </div>
+            <div class="top container"> Recent Courses & Certificates </div>
             
-            <div class="button left-button"><i class="fa fa-angle-left" ></i></div>
+            <div class="button left-button container"><i class="fa fa-angle-left" ></i></div>
             
-            <div class="certificates">
+            <div class="certificates container">
                 <div class="item CC001">
                     
                     <img src="/static/img/portfolio/Certificates/AWS-Cloud Practioner.png" alt=""> 
@@ -363,7 +364,7 @@
                 
             </div>
 
-            <div class="button right-button"><i class="fa fa-angle-right"></i></div> 
+            <div class="button right-button container"><i class="fa fa-angle-right"></i></div> 
         </section>
 
         <section class="page page-3" id="projects">

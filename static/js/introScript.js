@@ -2,19 +2,6 @@ class App {
 
   constructor() {
 
-    // window.onload = () => {
-    //   // Delay scrolling to top until everything is loaded (e.g., images, fonts)
-    //   setTimeout(() => {
-    //     window.scrollTo(0, 0);  // Scroll to the top on page load
-    //   }, 5);  // Delay to allow the page content to load
-    // };
-
-    // // Prevent browser's default scroll restoration
-    // if ('scrollRestoration' in history) {
-    //   history.scrollRestoration = 'manual';  // Prevent automatic scroll restoration
-    // }
-
-    
     console.log("JavaScript is working!");
     this.footer = document.querySelector("footer");
     this.arrowButton = document.getElementById("arrow-button");

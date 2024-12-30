@@ -11,10 +11,15 @@
 }
 
 :root{
-    /* ++ Measurement ++ */
+    /* ++ Main Measurement ++ */
     --header-height: 90px;
     --footer-height: 45px; 
     --padding-heading: 5px;
+
+    /* ++ Main Color ++ */
+    --header-bg-color: #221D2C;
+
+
     /* color */
     font-size: 16px;
     --background-color: black;
@@ -125,7 +130,7 @@ body > * {
     z-index: 10;
     width: 100%;
     height: var(--header-height);
-    background-color: var(--from-bg-img-4);
+    background-color: var(--header-bg-color);
     top: 0;
 }
 
@@ -241,6 +246,7 @@ section:first-child {
     display: flex;
     min-height: 100dvh;
     flex-direction: column;
+    background-color: var(--from-bg-img-8);
 }
 
 .page-1 .el:first-child {
@@ -385,7 +391,7 @@ li .stars {
     grid-area: s2hd;
     justify-content: center;
     align-items: center;
-    font-size: 1.3rem;
+    font-size: var(--fs-600);
     font-weight: bold;
     padding-top: 40px;
 }
@@ -440,6 +446,7 @@ li .stars {
     background-color: var(--from-bg-img-1) ;
     overflow: auto;
     border-radius: 20px;
+
 }
 
 .page-2 .item img {
@@ -758,7 +765,6 @@ li .stars {
     .header {
         display: flex;
         position: fixed;
-        background-color: var(--from-bg-img-4);
         top: 0;
     }
     .nav--open {
@@ -821,7 +827,7 @@ li .stars {
     }
 
     .page-1 .container {
-        border: 1px dashed orangered;
+        
         min-height: 100dvh;
         width: 90dvw;
         display: grid;
@@ -854,20 +860,53 @@ li .stars {
         left: 0;
     }
     
-   .footer-menu {
-    display: flex;
-    justify-content: flex-end;
-    width: 100%;
-    padding-inline-end: 5px;
-    
-    /* border: 1px dashed white; */
-}
+ 
 
-.footer-links a {
-    color: white;
-    /* border: 1px dashed orange; */
-    text-decoration: none;
-    column-gap: 2px;
-}
+
+    .page-2 .top {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .page-2 .container:nth-child(3) {
+        display: grid;
+        grid-template-columns: repeat(7, 60vw);
+        grid-template-rows: repeat(2, 30vh);
+        padding: 4vw;
+        gap: 4vw;
+        overflow-y: hidden;
+        overflow-x: auto; 
+
+        
+    }
+
+    .page-2 .item {
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        flex-direction: column;
+        background-color: var(--from-bg-img-1) ;
+        overflow: auto;
+        border-radius: 20px;
+        
+    }
+
+    .footer-menu {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        padding-inline-end: 5px;
+        
+        /* border: 1px dashed white; */
+    }
+    
+    .footer-links a {
+        color: white;
+        /* border: 1px dashed orange; */
+        text-decoration: none;
+        column-gap: 2px;
+    }
 
 }
