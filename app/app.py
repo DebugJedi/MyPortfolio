@@ -121,10 +121,12 @@ async def post_message(payload: dict = Body(...)):
     """Endpoint to handle form submissions."""
     print("Received payload: ", payload)  # Debugging: Log received data
 
+    # os.getenv("_WEBHOOK_URL")
     # Optional: Forward the data to Pabbly Connect URL for Google Sheets integration
     try:
         response = requests.post(
-            os.getenv("WEBHOOK_URL"),
+            os.getenv("_WEBHOOK_URL")
+            ,
             json=payload
         )
         response.raise_for_status()  # Raise an error for bad HTTP responses
