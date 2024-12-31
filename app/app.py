@@ -20,6 +20,7 @@ app = FastAPI()
 # app.add_middleware(HTTPSRedirectMiddleware)
 load_dotenv()
 
+WEBHOOK_URL = os.getenv("_WEBHOOK_URL")
 
 # Mount static files for serving assets (CSS, JS, etc.)
 app.mount(
@@ -125,8 +126,7 @@ async def post_message(payload: dict = Body(...)):
     # Optional: Forward the data to Pabbly Connect URL for Google Sheets integration
     try:
         response = requests.post(
-            os.getenv("_WEBHOOK_URL")
-            ,
+            WEBHOOK_URL,
             json=payload
         )
         response.raise_for_status()  # Raise an error for bad HTTP responses
