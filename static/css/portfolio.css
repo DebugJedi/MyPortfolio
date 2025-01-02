@@ -631,6 +631,11 @@ li .stars {
     object-position: center;
 }
 
+.page-3 .item a {
+    color: yellow;
+    /* background-color: yellow; */
+}
+
 @keyframes appear {
     from {
         opacity: 0;
