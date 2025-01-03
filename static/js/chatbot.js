@@ -41,7 +41,7 @@ async function uploadFile() {
     const formData = new FormData();
     formData.append('file', file);
     try{
-    const response = await fetch('https://myportfolio-95815450908.us-west1.run.app/upload_pdf', {
+    const response = await fetch('/upload_pdf', {
         method: 'POST',
         body: formData
     });
