@@ -100,7 +100,7 @@ async def query(body: dict= Body(...),
 async def get_aboutme(request: Request):
     return templates.TemplateResponse("coldEmail.html", {"request": request})
 
-@app.post("/generate_email")
+@app.post("https://priyankrao.co/generate_email")
 async def generateEmail(resume: UploadFile = File(...), job_url: str =Form(...)):
     try: 
         print("Received job_url:", job_url)  # Debugging
