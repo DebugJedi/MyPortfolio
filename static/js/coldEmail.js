@@ -21,7 +21,7 @@ submitButton.addEventListener('click', async () => {
         formData.append('resume', resumeFile);
         formData.append('job_url', jobUrl);
 
-        const response = await fetch('https://priyankrao.co/generate_email', { 
+        const response = await fetch('https://myportfolio-95815450908.us-west1.run.app/generate_email', { 
             method: 'POST',
             body: formData
         });
