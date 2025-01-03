@@ -22,6 +22,14 @@ load_dotenv()
 
 WEBHOOK_URL = os.getenv("_WEBHOOK_URL")
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins = ["https://priyankrao.co"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"], 
+)
+
 # Mount static files for serving assets (CSS, JS, etc.)
 app.mount(
     "/static",
@@ -100,7 +108,7 @@ async def query(body: dict= Body(...),
 async def get_aboutme(request: Request):
     return templates.TemplateResponse("coldEmail.html", {"request": request})
 
-@app.post("https://priyankrao.co/generate_email")
+@app.post("/generate_email")
 async def generateEmail(resume: UploadFile = File(...), job_url: str =Form(...)):
     try: 
         print("Received job_url:", job_url)  # Debugging
