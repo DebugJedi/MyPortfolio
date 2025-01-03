@@ -58,11 +58,14 @@ class DocumentProcessor:
         - embeddings: An instance of OpenAIEmbeddings used for embedding documents.
         """
         load_dotenv()
+        API_KEY = os.getenv("API_KEY")
+        if not API_KEY:
+            raise ValueError("API_KEY is not set.")
         self.model = model
         self.text_splitter = RecursiveCharacterTextSplitter(chunk_size =1000,
                                                         chunk_overlap=200)
         # self.openai_model = OpenAIEmbedding(api_key=st.secrets["API_KEY"])
-        self.openai_model = OpenAIEmbedding(api_key=os.getenv("API_KEY"))
+        self.openai_model = OpenAIEmbedding(api_key=API_KEY)
         # self.openai_model = OpenAIEmbedding(api_key=api_key)
         
     def process_documents(self, documents):

@@ -64,8 +64,8 @@ async function uploadFile() {
   document.getElementById("upload-message").style.color = "red";
   }
     
-
 } 
+
 async function handleFileChange() {
     
   uploadFile();
