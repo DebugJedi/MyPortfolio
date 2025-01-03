@@ -40,11 +40,12 @@ async function uploadFile() {
     }
 
 
+    console.log("File Name:", file.name);
+    console.log("File Type:", file.type);
+    console.log("File Size:", file.size);
+
     const formData = new FormData();
     formData.append('file', file);
-
-    console.log("File Name: ", file.name);
-    console.log("File Type: ", file.type);
     try{
     const response = await fetch('/upload_pdf', {
         method: 'POST',

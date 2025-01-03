@@ -70,26 +70,36 @@ async def get_aboutme(request: Request):
 
 @app.post("/upload_pdf")
 async def upload_pdf(file: UploadFile = File(...) ):
-    app.state.graphrag = None
-    with tempfile.NamedTemporaryFile(delete=False) as tmp_file:
-        tmp_file.write(file.file.read())
-        tmp_file_path = tmp_file.name
     try:
-        loader = PyPDFLoader(tmp_file_path)
-        documents = loader.load()[:20]
+        if not file:
+            raise HTTPException(status_code=400, detail="No file received.")
+        if not file.filename.endswith(".pdf"):
+            raise HTTPException(status_code=400, detail="invalid file type. Only PDF accepted.")
+        print(f"File received: {file.filename}, Content Type: {file.content_type}")
+        app.state.graphrag = None
+        with tempfile.NamedTemporaryFile(delete=False) as tmp_file:
+            tmp_file.write(file.file.read())
+            tmp_file_path = tmp_file.name
+        try:
+            loader = PyPDFLoader(tmp_file_path)
+            documents = loader.load()[:20]
+        except Exception as e:
+            raise HTTPException(status_code=400, detail=f"Failed to process PDF: {str(e)}")
+        graph_rag = GraphRAG()
+        try:
+            graph_rag.process_documents(documents)
+        except Exception as e:
+            raise HTTPException(status_code=400, detail="PDF not uploaded.")
+        app.state.graphrag = graph_rag
+
+        print("graphrag instances set: ", app.state.graphrag)
+        return JSONResponse({"Message": "File processed successfully", "file_name": file.filename})
+    except HTTPException as e:
+        print(f"HTTPException: {str(e)}")
+        raise e
     except Exception as e:
-        raise HTTPException(status_code=400, detail=f"Failed to process PDF: {str(e)}")
-    graph_rag = GraphRAG()
-    try:
-        graph_rag.process_documents(documents)
-    except Exception as e:
-        raise HTTPException(status_code=400, detail="PDF not uploaded.")
-    app.state.graphrag = graph_rag
-
-    print("graphrag instances set: ", app.state.graphrag)
-    return JSONResponse({"Message": "File processed successfully", "file_name": file.filename})
-
-
+        print(f"Unexpected Error: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"An unexpected error occured: {str(e)}")
 @app.post("/query")
 async def query(body: dict= Body(...),
                 graph_rag: GraphRAG = Depends(get_graph_rag)):
