@@ -74,9 +74,11 @@ async def upload_pdf(file: UploadFile = File(...) ):
     with tempfile.NamedTemporaryFile(delete=False) as tmp_file:
         tmp_file.write(file.file.read())
         tmp_file_path = tmp_file.name
-    loader = PyPDFLoader(tmp_file_path)
-    documents = loader.load()[:20]
-
+    try:
+        loader = PyPDFLoader(tmp_file_path)
+        documents = loader.load()[:20]
+    except Exception as e:
+        raise HTTPException(status_code=400, detail=f"Failed to process PDF: {str(e)}")
     graph_rag = GraphRAG()
     try:
         graph_rag.process_documents(documents)

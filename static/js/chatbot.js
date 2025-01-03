@@ -38,8 +38,13 @@ async function uploadFile() {
         document.getElementById("upload-message").style.color = "red";
         return;
     }
+
+
     const formData = new FormData();
     formData.append('file', file);
+
+    console.log("File Name: ", file.name);
+    console.log("File Type: ", file.type);
     try{
     const response = await fetch('/upload_pdf', {
         method: 'POST',

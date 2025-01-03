@@ -57,7 +57,7 @@ class DocumentProcessor:
         - text_splitter: An instance of RecursiveCharacterTextSplitter with specified chunk size and overlap.
         - embeddings: An instance of OpenAIEmbeddings used for embedding documents.
         """
-        load_dotenv()
+        
         API_KEY = os.getenv("API_KEY")
         if not API_KEY:
             raise ValueError("API_KEY is not set.")
