@@ -62,8 +62,8 @@ async function uploadFile() {
         document.getElementById('chat-container').style.display = "block";
         document.getElementById('chat-history').style.display = "block";
     } else {
-      document.getElementById("upload-message").textContent = 'Error: ${result.detail}';
-      document.getElementById("upload-message").style.color = "red";
+        document.getElementById("upload-message").textContent = `Error: ${result.detail || JSON.stringify(result)}`;
+        document.getElementById("upload-message").style.color = "red";
       }
 } catch (error){
   document.getElementById("upload-message").textContent = "An error occured while uploading. Please try again later.";
