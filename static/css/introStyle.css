@@ -441,6 +441,7 @@ main {
     width: 100%;
     position: relative;
     font-size: 1.3rem;
+    color: yellow;
 }
 
 .social-links a {
@@ -633,5 +634,6 @@ main {
     text-decoration: none;
     column-gap: 2px;
 }
+
 
 }
