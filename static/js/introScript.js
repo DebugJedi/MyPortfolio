@@ -52,7 +52,7 @@ class App {
 
     console.log("Page loader.....")
     
-    const words = ["a Painter!", "an Adventurer!", "an Analyst!"];
+    const words = ["a Philomath/Autodidact!", "an Inquisitive!", "an Analyst!"];
     let wordIndex = 0;
     let charIndex = 0;
     const typingElement = document.querySelector(".typing");
