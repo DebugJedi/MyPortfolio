@@ -828,9 +828,8 @@ li .stars {
         display: flex;
         flex-direction: column;
         width: 100vw;
-        border: 1px dashed yellow;
         min-height: 100dvh;
-        margin-block-start: var(--header-height);
+        /* margin-block-start: 20px; */
     }
     .page-1 .h3 {
         font-size: var(--fs-400);
