@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <title>Cancer Prediction Intro ⚕️</title>
+    <link href="{{ url_for('static', path='css/cancerprediciton.css') }}" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://myportfolio-95815450908.us-west1.run.app/static/css/portfolio.css"> -->
+    
+
+</head>
+<body>
+    
+    <header class="header">
+        
+        <div class="h-box logo">            
+            <img src="{{ url_for('static', path='img/img5.png') }}" alt="logo">
+        </div>
+        
+        <div class="h-box logo-header">
+            <span class="name">MyLab</span>
+            <span class="profession">Data Science</span>
+        </div>
+
+        <nav class="h-box nav">
+            <ul class="nav__links">
+                <li><a class="home-button" href="/"> Home</a></li>
+                <li><a class="portfolio-button" href="/portfolio">Portfolio</a></li>
+                <li><a href="https://cancerprediction-j4wt7j.streamlit.app/" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a></li>
+                
+            </ul>
+        </nav>
+        
+        <div class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </header>
+
+    
+
+    <main class="pf-pages">
+        <section class="page page-1" id="skills">
+            <div class="introduction">
+                <h3 class="page-title">Cancer Prediction using Neural Network</h3>
+                <div class="info">
+                    To start using the app, simply <a href="https://cancerprediction-j4wt7j.streamlit.app/" target="_blank" rel="noopener noreferrer">click here</a>.
+                </div>
+                <div class="intro-para">
+                    <p>
+                        Welcome to the Cancer Predictor app! This web-based application uses a deep learning
+                        model to predict whether a mass is beign or malignant based on a set of clinical measurements. The app is built using a neural network 
+                        architecture that has been trained on a dataset of cancer diagnostic features. It leverages the power of PyTorch for the model and streamlit for seamless user interface that allows you to interact with the system in real time. 
+                    </p>
+                </div>
+                <div class="img">
+                    <img src="/static/img/portfolio/projects/CancerPrediction.png" alt="Cancer Predicition">
+                </div>
+                <div class="sh_ sub-heading">How it works:</div>
+                <div class="statements">
+                    <h2 class="sh_">1. Data Preprocessing and Model Training</h2>
+                    <p class = "points_">
+                        The model is built using a dataset containing measurements of various features of breast cell clusters, such as radius, texture, perimeter, area, smoothness, and compactness, among others.
+                    </p>
+                    <p class="points_">
+                        These features are preprocessed by scaling the data to ensure all features are on the same scale. The neural network is trained using PyTorch’s deep learning capabilities to predict whether a mass is benign (non-cancerous) or malignant (cancerous).
+                    </p>
+
+                    <h2 class="sh_">2. Prediction Mechanism: </h2>
+                    <p class = "points_">
+                        When a user interacts with the app, the app takes input from various sliders 
+                        corresponding to clinical measurements (e.g, radius, texture, perimeter).
+                    </p>
+                    <p class="points_">
+                        The input data is scaled, processed through the trained model, and a prediction is made.
+                    </p>
+
+                    <p class="points_">
+                        The output is a prediction of either benign or malignant, along with the probability for both classifications, helping you understand the level of certainity in the result.
+                    </p>
+
+                    <!-- Point 3: -->
+                    <h2 class="sh_">2. Visualizing the Data: </h2>
+                    <p class="points_">
+                        The app provides a Radar Chart that visulally represent the clinical measurement for the "mean", "standard error", and "worst" categories, helping you understand how the values related to each other.
+                    </p>
+                    <p class="points_">
+                        The chart makes it easier for you to visually assess how changes in measurements might affect the predicted outcome. 
+                    </p>
+
+                    <!-- How to use app: -->
+                </div>
+                <div class="sh_ sub-heading">How to Use the App:</div>
+                <div class="statements">
+                    <h2 class="sh_">1. Input Data via Sliders:</h2>
+                    <p class = "points_">
+                        On the left sidebar, you'll find a set of sliders corresponding to various clinical features of the mass.
+                    </p>
+                    <p class="points_">
+                        Simply adjust the sliders to input the values for a specific case. For example, you can modify the mean radius or mean area of the tumor as per the available data.
+                    </p>
+                    
+                    <p class="points_">
+                        The sliders represent values that are normalized, so don't worry about scaling them manually - the app does that for you!
+                    </p>
+
+                    <h2 class="sh_">2. View prediction: </h2>
+                    <p class = "points_">
+                        After selecting the desired values, you will see the prediction result in the main area of the app.
+                    </p>
+                    <p class="points_">
+                        The app will display whether the mass is likely benign or malignant, along with the associated probability for each outcome.
+                    </p>
+
+                    <p class="points_">
+                        The output is a prediction of either benign or malignant, along with the probability for both classifications, helping you understand the level of certainity in the result.
+                    </p>
+                    
+                </div>
+
+                <div class="sh_ sub-heading">Why use this App:</div>
+                <div class="statements">
+                    
+                    <p class = "points_">
+                        Early Detection: The app aids in early detection of cancer by providing quick and accurate predictions based on clinical data.
+                    </p>
+                    <p class="points_">
+                        Educational Tool: It's an excellent tool for understanding how various tumor features contribute to cancer diagnoses.
+                    </p>
+                    
+                    <p class="points_">
+                        Accesibility: With just few clicks, anyone can assess a mass and learn more aobut the model's prediction accuracy.
+                    </p>
+
+                    
+
+                    
+                </div>
+            </div>
+        </section>
+
+        
+    </main>
+
+    <div class="arrow-section">
+       
+        <button id="arrow-button" class="arrow-button">&#x2191;</button>
+    </div>
+
+    <footer class="footer">
+        
+        <div class="footer-container">
+            <div class="social-links">
+                <ul class="social-media">
+                    <a href="https://github.com/DebugJedi" target="_blank" rel="noopener noreferrer" ><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/priyank-rao/" target="_blank" rel="noopener noreferrer" ><i class="fa-brands fa-linkedin-in"></i></a>
+                </ul>
+            </div>
+            <div class="footer-menu">
+                <ul class="footer-links">
+                    <li><a class="home-button footernav" href="/"> Home</a></li>
+                    <li><a class="portfolio-button footernav" href="/portfolio"> Portfolio</a></li>
+                    <li><a class="contact-button footernav" href="#page-2"> Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
+    <!-- <script src="/static/js/portfolio.js"></script> -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    
+    <!-- Boxicons CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>    
+    
+</body>
+</html>

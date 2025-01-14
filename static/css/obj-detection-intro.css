@@ -1,0 +1,365 @@
+/* Google font poping */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap');
+@import url("https://unpkg.con/open-props");
+@import url("https://unpkg.com/open-props/normalize.min.css");
+
+*{
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    /* ++ Main Measurement ++ */
+    --header-height: 90px;
+    --footer-height: 45px; 
+    --padding-heading: 5px;
+
+    /* ++ Main Color ++ */
+    --header-bg-color: #aab079;
+    
+    --body-bg-color: #f5f4ea;
+
+    /* color */
+    font-size: 16px;
+    --background-color: black;
+    --background-color1: white;
+    --text-color: white;
+    --from-bg-img-1: #804c22;
+    --from-bg-img-2: #855db6;
+    --from-bg-img-3: #c3cbd5;
+    --from-bg-img-4: #af7a35;
+    --from-bg-img-5: #2a2031;
+    --from-bg-img-6: #687887;
+    --from-bg-img-7: #98A0AF;
+    --from-bg-img-8: #375A77;
+    --from-bg-img-9: #433486;
+    --from-bg-img-10: #0E111B;
+    
+    --from-bg-img-11: #221D2C;
+    --from-bg-img-12: #040813;
+    --from-bg-img-13:#3A2B46;
+    --from-bg-img-14: #E6A626;
+    --from-bg-img-15: #E4E7EC;
+    /* Transition */
+    --tran-02: all 0.2s ease;
+    --tran-03: all 0.3s ease;
+    --tran-04: all 0.4s ease;
+    --tran-05: all 0.5s ease;
+    --traneo-04: all 0.4s ease-in-out;
+    --background1: #264653;
+    --background2: #2e5767;
+    --background3: #34697e;
+    --background4: #478197;
+    --sidebar1-bg: #E9C46A;
+    --sidebar2-bg: #F4A261;
+    --sidebar3-bg: #F4A261;
+    --sidebar4-bg: #E76F51;
+    --separator-fill: #D8A25E;
+    /* ++++ Scrollbar +++++ */
+    --scroller-w: 8px; /* Scrollbar width */
+    --scroller-bg: #f1f1f1; /* Scrollbar track color */
+    --scroller-thumb: #bdbdbd; /* Scrollbar handle color */
+    --scroller-thumb-hover: #888; /* Scrollbar handle hover color */
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    scrollbar-width: thin; /* thin | auto */
+    scrollbar-color: #bdbdbd #f1f1f1; /* thumb color, track color */
+}
+
+
+/* Scrollbar Width and Radius */
+::-webkit-scrollbar {
+    width: var(--scroller-w);
+    height: var(--scroller-w); /* For horizontal scrollbars */
+}
+
+/* Track (The area behind the scrollbar) */
+::-webkit-scrollbar-track {
+    background: var(--scroller-bg);
+    border-radius: 10px;
+}
+
+/* Handle (The draggable part of the scrollbar) */
+::-webkit-scrollbar-thumb {
+    background-color: var(--scroller-thumb);
+    border-radius: 10px;
+    border: 2px solid var(--scroller-bg); /* Adds spacing around the thumb */
+}
+
+/* Handle on Hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--scroller-thumb-hover);
+}
+
+/* Horizontal Scrollbar Styling (Optional) */
+::-webkit-scrollbar-track-piece:start {
+    background: linear-gradient(to right, #f1f1f1, #e6e6e6);
+}
+
+::-webkit-scrollbar-track-piece:end {
+    background: linear-gradient(to right, #e6e6e6, #f1f1f1);
+}
+
+body {
+    background-color: var(--body-bg-color);
+    display: grid;  
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows: 90px auto auto;
+    grid-template-areas:
+        "hd hd hd hd hd hd hd hd hd"
+        "mn mn mn mn mn mn mn mn mn"
+        "ft ft ft ft ft ft ft ft ft";
+    overflow-x: hidden;
+}
+
+.header {
+    display: flex;
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    height: var(--header-height);
+    background-color: var(--header-bg-color) ;
+    top: 0;
+}
+
+.header .logo {
+    display: flex;
+    position: relative;
+    max-width: 90px;    
+    object-fit: contain;
+    border-radius: 10%;
+}
+
+.header .logo img {
+    width: 80%;
+    height: 60%;
+    border-radius: 10%;
+    margin-inline: auto;
+    margin-block: auto;
+}
+
+.header .logo-header {
+    margin-block: auto;
+    min-width: 120px;
+    font-size: var(--fs-400);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    /* margin-inline-start: 0; */
+}
+
+.header .logo-header span {
+    font-size: var(--fs-600);
+}
+
+.header .logo-header .name {
+    padding-inline-end: 40px;
+}
+
+.h-box.nav {
+    display: flex;
+    font-size: var(--fs-500);
+    display: flex;
+    margin-left: auto; 
+    align-items: center;
+    padding-inline-end: 20px;
+    transition: var(--traneo-04);
+}
+
+.nav__links {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav__links li a{
+    text-decoration: none;
+    position: relative;
+    height: 30px;
+    color: #000;
+}
+
+.nav__links li a::after {
+    content: "";
+    width: 0;
+    height: 3px;
+    background-color: #ff004f;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    transition: var(--tran-04);
+}
+
+.nav__links li a:hover::after {
+    width: 100%;  
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    position: relative;
+    margin-inline-start: auto;
+    margin-inline-end: 15px;
+    margin-block: auto ;
+}
+
+.hamburger .bar {
+    height: 2px;
+    width: 27px;
+    background-color: #fff;
+    margin: 5px 0;
+    opacity: 0.8;
+}
+
+main.pf-pages {
+    grid-area: mn;
+    background-color: var(--body-bg-color);
+    color: white;
+    grid-template-rows: repeat(2, auto);
+    grid-column: 1fr;
+    height: 250dvh;
+}
+
+
+.page-1 .introduction {
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    height: 100dvh;
+    width: auto;
+    padding: 25px;
+    margin-inline: 30px;
+    position: relative;
+}
+
+.page-1 .introduction .info {
+    color: #000;
+}
+
+.page-1 .introduction .info a {
+    color: red;
+}
+
+.page-1 .introduction .intro-para {
+    padding-block-start: 15px;
+    padding-block-end: 5px;
+}
+.page-1 .introduction .page-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: underline;
+    font-size: 2rem;
+    padding: 30px;
+
+}
+
+.page-1 .introduction .img  {
+    position: relative;
+    display: flex;
+    height: 210px;
+    object-fit: fit;
+    width: 90vw;
+    justify-content: center;
+    margin-block: 20px;
+}
+
+.page-1 .sub-heading {
+    font-weight: bolder;
+    padding: 10px;
+    text-decoration: underline;
+}
+
+.page-1 .sh_ {
+    padding-block-end: 10px;
+    padding-inline-start: 0.5rem;
+}
+
+.page-1 .introduction .statements .points_{
+    padding-inline-start: 2%;
+}
+
+.page-1 .introduction .statements p{
+    list-style:disc outside none;
+    display:list-item;
+    margin-inline-start: 3%;
+    padding-block-end: 5px;
+}
+
+
+
+/* Footer container */
+.footer {
+    grid-area: ft;
+    height: 90px;
+    position: relative; 
+    background-color: var(--from-bg-img-5);
+    overflow: hidden; 
+    align-items: center;
+    justify-content: center;
+    padding-block-start: 10px;
+}
+
+/* Footer links */
+.footer-container {
+    display: flex;
+    justify-content: flex-end;
+}
+.footer-menu {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding-inline-end: 20px;
+    /* border: 1px dashed white; */
+}
+
+.social-links {
+    display: flex;
+    flex-direction:row;
+    justify-content:space-between;
+    padding-left: 35px;
+    width: 100%;
+    position: relative;
+    font-size: 1.3rem;
+}
+
+.social-links a {
+    margin-right: 20px;
+    color: #49d020;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+}
+
+@media (max-width: 420px) {
+   
+    
+    main.pf-pages {
+        height: auto;
+        overflow: scroll;
+    }
+
+}

@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <title>Cancer Prediction Intro ⚕️</title>
+    <link href="{{ url_for('static', path='css/obj-detection-intro.css') }}" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://myportfolio-95815450908.us-west1.run.app/static/css/obj-detection-intro.css"> -->
+    
+
+</head>
+<body>
+    
+    <header class="header">
+        
+        <div class="h-box logo">            
+            <img src="{{ url_for('static', path='img/img5.png') }}" alt="logo">
+        </div>
+        
+        <div class="h-box logo-header">
+            <span class="name">MyLab</span>
+            <span class="profession">Data Science</span>
+        </div>
+
+        <nav class="h-box nav">
+            <ul class="nav__links">
+                <li><a class="home-button" href="/"> Home</a></li>
+                <li><a class="portfolio-button" href="/portfolio">Portfolio</a></li>
+                <li><a href="https://computervision-w7a5mhbcfnbui4.streamlit.app/" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a></li>
+                
+            </ul>
+        </nav>
+        
+        <div class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </header>
+
+    
+
+    <main class="pf-pages">
+        <section class="page page-1" id="skills">
+            <div class="introduction">
+                <h3 class="page-title">YOLO 11m Multiple Object Detection App</h3>
+                <div class="info">
+                    To start using the app, simply <a href="https://computervision-w7a5mhbcfnbui4.streamlit.app/" target="_blank" rel="noopener noreferrer">click here</a>.
+                </div>
+                <div class="intro-para">
+                    <p>
+                        Welcome to the YOLO 11m Multiple Object Detection App! This application leverages the power of the YOLO (You Only Look Once) object detection model 
+                        to provide a seamless and intuitive platform for detecting multiple objects in images and videos. The app is designed to work with custom trained 
+                        YOLO models and allows users to identify and classify objects in real-time, providing instant feedback and visual results.
+                    </p>
+                </div>
+                <div class="img">
+                    <img src="/static/img/portfolio/projects/Object-detection.png" alt="Object-detection">
+                </div>
+                <div class="sh_ sub-heading">How it works:</div>
+                <div class="statements">
+                    <h2 class="sh_">1. Powered by YOLO: The app uses a custom-trained YOLO model (best.pt) to detect specific objects or gestures, including:
+
+                    </h2>
+                    <p class = "points_">
+                        OK
+                    </p>
+                    <p class="points_">
+                        ThumbsUp
+
+                    </p>
+                    <p class="points_">
+                        ThumbsDown
+
+                    </p>
+                    <p class="points_">
+                        FingersCross
+                    </p>
+                    <p class="points_">
+                        PeaceOut
+                    </p>
+
+                    <h2 class="sh_">2. Multiple Input Sources: The app supports three modes of input: </h2>
+                    <p class = "points_">
+                        Image Upload: Detect objects in uploaded images.
+
+                    </p>
+                    <p class="points_">
+                        Video Upload: Analyze videos for object detection.
+
+                    </p>
+
+                    <p class="points_">
+                        Live Feed: While currently unavailable, this feature is designed for real-time detection from a live camera feed.
+                    </p>
+
+                    <!-- Point 3: -->
+                    <h2 class="sh_">3. Customizable Parameters: Users can:</h2>
+                    <p class="points_">
+                        Select specific object classes for detection.
+                    </p>
+                    <p class="points_">
+                        Adjust the confidence threshold to fine-tune the sensitivity of the model.
+
+                    </p>
+                    <p class="points_">
+                        Choose the processing device (CPU or GPU) for enhanced performance.
+                    </p>
+                    <h2 class="sh_">4. Interactive Detection: Once the input is processed, the app displays the detected objects, their bounding boxes, and confidence scores directly on the images or frames.</h2>
+                    <!-- How to use app: -->
+                </div>
+                <div class="sh_ sub-heading">How to Use the App:</div>
+                <div class="statements">
+                    <h2 class="sh_">1. Select Activity:</h2>
+                    <p class = "points_">
+                        Choose your desired input source (Image, Video, or Live Feed) from the sidebar menu.
+                    </p>
+
+                    <h2 class="sh_">2. Upload Input: </h2>
+                    <p class = "points_">
+                        For images or videos, upload your file in the respective format:
+                    </p>
+                    <p class="points_">
+                        Image: .png, .jpeg, or .jpg
+                    </p>
+
+                    <p class="points_">
+                        Video: .mp4
+                    </p>
+                    <p class="points_">
+                        The uploaded media will appear in the sidebar for confirmation.
+                    </p>
+                    
+                    <h2 class="sh_">3. Customize Detection Settings:</h2>
+                    <p class = "points_">
+                        Optionally, select specific object classes (or all classes) to focus on particular detections.
+                    </p>
+                    <p class="points_">
+                        Adjust the minimum confidence threshold slider to balance between precision and recall.
+                    </p>
+                    <h2 class="sh_">4. Start Detection:</h2>
+                    <p class = "points_">
+                        Click the "Detect" button to initiate the object detection process.
+
+                    </p>
+                    <p class="points_">
+                        The app will process the input and display the results:
+                    </p>
+                    <p class="points_">
+                        Images: The processed images with bounding boxes are shown in the output section.
+
+                    </p>
+                    <p class="points_">
+                        Videos: The app plays back the video with detected objects highlighted in real-time.
+                    </p>
+                    
+                </div>
+
+                <div class="sh_ sub-heading">Who can use this app?</div>
+                <div class="statements">
+                    <h2 class="sh_">This app is perfect for:</h2>
+                    <p class = "points_">
+                        Developers and researchers exploring computer vision.   
+                    </p>
+                    <p class = "points_">
+                        Hobbyists testing custom YOLO models.
+                    </p>
+                    <p class = "points_">
+                        Enthusiasts experimenting with gesture or object detection.
+                    </p>
+
+                    
+
+                    
+                </div>
+            </div>
+        </section>
+
+        
+    </main>
+
+    <div class="arrow-section">
+       
+        <button id="arrow-button" class="arrow-button">&#x2191;</button>
+    </div>
+
+    <footer class="footer">
+        
+        <div class="footer-container">
+            <div class="social-links">
+                <ul class="social-media">
+                    <a href="https://github.com/DebugJedi" target="_blank" rel="noopener noreferrer" ><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/priyank-rao/" target="_blank" rel="noopener noreferrer" ><i class="fa-brands fa-linkedin-in"></i></a>
+                </ul>
+            </div>
+            <div class="footer-menu">
+                <ul class="footer-links">
+                    <li><a class="home-button footernav" href="/"> Home</a></li>
+                    <li><a class="portfolio-button footernav" href="/portfolio"> Portfolio</a></li>
+                    <li><a class="contact-button footernav" href="#page-2"> Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
+    <!-- <script src="/static/js/portfolio.js"></script> -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    
+    <!-- Boxicons CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>    
+    
+</body>
+</html>

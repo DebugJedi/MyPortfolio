@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <title>Cold Email 📧</title>
+    <link href="{{ url_for('static', path='css/coldemail-intro.css') }}" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://myportfolio-95815450908.us-west1.run.app/static/css/portfolio.css"> -->
+    
+
+</head>
+<body>
+    
+    <header class="header">
+        
+        <div class="h-box logo">            
+            <img src="{{ url_for('static', path='img/img5.png') }}" alt="logo">
+        </div>
+        
+        <div class="h-box logo-header">
+            <span class="name">MyLab</span>
+            <span class="profession">Data Science</span>
+        </div>
+
+        <nav class="h-box nav">
+            <ul class="nav__links">
+                <li><a class="home-button" href="/"> Home</a></li>
+                <li><a class="portfolio-button" href="/portfolio">Portfolio</a></li>
+                <li><a href="/coldemail" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a></li>
+                
+            </ul>
+        </nav>
+        
+        <div class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </header>
+
+    
+
+    <main class="pf-pages">
+        <section class="page page-1" id="skills">
+            <div class="introduction">
+                <h3 class="page-title">Cold Email</h3>
+                <div class="info">
+                    To start using the app, simply <a href="/coldemail" target="_blank" rel="noopener noreferrer">click here</a>.
+                </div>
+                <div class="intro-para">
+                    <p>
+                        The Cold Email Generator App is an innovative tool designed to streamline the job application process by crafting personalized cold emails for hiring managers. By leveraging advanced AI models, this app bridges the gap between your resume and the job posting, enabling you to create compelling, tailored emails that highlight your suitability for the role.
+                    </p>
+                </div>
+                <div class="img">
+                    <img src="/static/img/portfolio/projects/ColdEmail.webp" alt="Cold Email">
+                </div>
+                <div class="sh_ sub-heading">Key Features:</div>
+                <div class="statements">
+
+
+                    <h2 class="sh_">1. Resume Analysis: </h2>
+                    <p class = "points_">
+                        The app extracts key information from your resume, including your professional experience, skills, and accomplishments.
+                    </p>
+                    <h2 class="sh_">2. Job Posting Parsing: </h2>
+                    <p class="points_">
+                        By inputting a job posting URL, the app scrapes and analyzes the job requirements, extracting crucial details such as role, skills, experience, and job description in a structured JSON format.
+                    </p>
+                    <h2 class="sh_">3. AI-Powered Personalization: </h2>
+                    <p class="points_">
+                        Using an advanced AI model, the app combines insights from your resume and the job posting to generate a cold email, ensuring it aligns with the specific requirements of the job.
+                    </p>
+                    
+                    <h2 class="sh_">4. Seamless Integration</h2>
+                    <p class = "points_">
+                        Built with modern technologies, including LangChain, ChatGroq, and PyPDF2, the app ensures a smooth and reliable user experience.
+                    </p>
+                    <!-- How to use app: -->
+                </div>
+                <div class="sh_ sub-heading">How to Use the App:</div>
+                <div class="statements">
+                    
+                    <p class = "points_">
+                        Upload your resume in PDF format.
+                    </p>
+                    <p class="points_">
+                        Provide the URL of the job posting you're interested in.
+                    </p>
+                    
+                    <p class="points_">
+                        The app parses both inputs and creates a concise, professional cold email, highlighting your qualifications and enthusiasm for the role.
+                    </p>
+
+                    
+                </div>
+
+            </div>
+        </section>
+
+        
+    </main>
+
+   ]
+
+    <footer class="footer">
+        
+        <div class="footer-container">
+            <div class="social-links">
+                <ul class="social-media">
+                    <a href="https://github.com/DebugJedi" target="_blank" rel="noopener noreferrer" ><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/priyank-rao/" target="_blank" rel="noopener noreferrer" ><i class="fa-brands fa-linkedin-in"></i></a>
+                </ul>
+            </div>
+            <div class="footer-menu">
+                <ul class="footer-links">
+                    <li><a class="home-button footernav" href="/"> Home</a></li>
+                    <li><a class="portfolio-button footernav" href="/portfolio"> Portfolio</a></li>
+                    <li><a class="contact-button footernav" href="#page-2"> Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
+    <!-- <script src="/static/js/portfolio.js"></script> -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    
+    <!-- Boxicons CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>    
+    
+</body>
+</html>

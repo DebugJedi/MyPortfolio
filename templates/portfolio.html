@@ -7,8 +7,8 @@
     <script src="https://unpkg.com/scrollreveal"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
     <title>Portfolio</title>
-    <!-- <link href="{{ url_for('static', path='css/portfolio.css') }}" rel="stylesheet"> -->
-    <link rel="stylesheet" href="https://myportfolio-95815450908.us-west1.run.app/static/css/portfolio.css">
+    <link href="{{ url_for('static', path='css/portfolio.css') }}" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://myportfolio-95815450908.us-west1.run.app/static/css/portfolio.css"> -->
     
 
 </head>
@@ -443,85 +443,48 @@
         </section>
 
         <section class="page page-3" id="projects">
-
-            <div class="page3-box proj-header">🎖️ Recent Projects 🎖️</div>
-            
-            <div class="page3-box button projects-left-button"><i class="fa fa-angle-left" ></i></div>
-            
-            <div class="page3-box left-section">
-                <div class="desc desc001">
-                    <h3>Breast Cancer Prediction using Neural Networks</h3>
-                    <p>
-                        This project aims to build a predictive model to classify breast cancer tumors as either malignant (M) or benign (B) based on various features derived from cell measurements. The model utilizes a neural network (NN) architecture for binary classification, leveraging a dataset of features that describe the characteristics of cell nuclei in breast cancer biopsies. The final goal is to predict whether a tumor is malignant or benign based on these measurements, helping medical professionals make informed decisions about treatment.
-                        
-                        The model is built using a fully connected neural network (also known as a Multi-Layer Perceptron, or MLP)
-
-                    </p>
+            <div class="header">Recent Projects</div>
+            <div class="project project-001">
+                <h3>Cancer Prediction using Neural Networks</h3>
+                <div class="img">
+                    <img src="/static/img/portfolio/projects/CancerPrediction.png" alt="Cancer Predicition">
                 </div>
-                <div class="desc desc002">
-                    <h3>Cold Email</h3>
-                    <p>
-                        This application, built using Python and the LangChain framework, automates the process of generating a personalized cold email for job applications. The email is crafted based on a user's resume and a job posting scraped from a URL. The core components of the application include:
 
-                        Groq API Integration: The app utilizes the ChatGroq model for language processing, which is responsible for generating tailored email content. The model uses the "llama-3.1-70b-versatile" variant, offering advanced capabilities for text generation.
-
-                    </p>
+                <div class="link">
+                    <a href="/CancerPrediction-Intro" target="_blank" rel="noopener noreferrer" ><i class="fas fa-external-link-alt"></i></a>
                 </div>
-                <div class="desc desc003">
-                    <h3>Custom Hand Gesture Detection with YOLO</h3>
-                    <p>
-                        
-                        This project showcases a custom hand gesture detection system built using the YOLO (You Only Look Once) object detection framework. The model is designed to recognize and classify five common hand gestures: FingersCross, OK, PeaceOut, ThumbsDown, and ThumbsUp.
-                        This project demonstrates the power of YOLO for real-world applications by training a custom model for specialized object detection tasks. It also emphasizes efficient development practices with Dev Containers, enabling developers to quickly get started with training, fine-tuning, and deploying machine learning models.
 
-                        This setup is ideal for developers, researchers, and enthusiasts looking to explore object detection or create interactive applications that utilize computer vision
-                    </p>
+            </div>
+            <div class="project project-002">
+                <h3>Cold Email</h3>
+                <div class="img">
+                    <img src="/static/img/portfolio/projects/ColdEmail.webp" alt="Cold Email">
                 </div>
-                <div class="desc desc004">
-                    <h3>The GraphRAG ChatBot</h3>
-                    <p>
-                        The ChatBot is like a super-smart map that helps answer questions about any document. It breaks the document into small pieces, turns them into nodes, and connects these points with edges if they share ideas. To make this map, I use tools like NetworkX to organize information, a lemmatizer to simplify words, and embeddings to compare ideas as numbers.
-                        This chatbot doesn’t just stop at finding related ideas—it goes further. It uses a llm to understand the concepts and connects them using advanced methods like cosine similarity. When you ask it a question, the chatbot explores the map to find the best answers. If the answer isn’t clear, it digs deeper, searching nearby ideas and adding more context until it finds a complete answer. This is like solving a puzzle—piece by piece, it builds the best possible response.
-                        Whether it’s for a kid curious about how a machine reads stories or an expert analyzing complex reports, GraphRAG bridges the gap between raw information and clear, thoughtful answers!
-
-                    </p>
+                <div class="link">
+                    <a href="/ColdEmail-Intro" target="_blank" rel="noopener noreferrer" ><i class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
-            <div class="page3-box projects">
-                <div class="item proj001">
-                    <div class="img">
-                        <img src="/static/img/portfolio/projects/CancerPrediction.png" alt="Cancer Predicition">
-                    </div>
-                    <h3>Cancer Prediction</h3>
-                    <a href="https://cancerprediction-j4wt7j.streamlit.app/" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
+            <div class="project project-003">
+                <h3>Custom Hand Gesture Detection with YOLO</h3>
+                <div class="img">
+                    <img src="/static/img/portfolio/projects/Object-detection.png" alt="Object-detection">
                 </div>
 
-                <div class="item proj002">
-                    <div class="img">
-                        <img src="/static/img/portfolio/projects/ColdEmail.webp" alt="Cold Email">
-                    </div>
-                    <h3>Cold Email</h3>
-                    <a href="/coldemail" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
-                </div>
-
-                <div class="item proj003">
-                    <div class="img">
-                        <img src="/static/img/portfolio/projects/Object-detection.png" alt="Object-detection">
-                    </div>
-                    <h3>Object-Detection</h3>
-                    <a href="https://computervision-w7a5mhbcfnbui4.streamlit.app/" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
-                </div>
-
-                <div class="item proj004">
-                    <div class="img">
-                        <img src="/static/img/portfolio/projects/chatbot.avif" alt="Chatbot">
-                    </div>
-                    <h3>ChatBot</h3>
-                    <a href="/chatbot" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a>
-                    
+                <div class="link">
+                    <a href="/ObjDetection-Intro" target="_blank" rel="noopener noreferrer" ><i class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
-            <div class="page3-box button projects-right-button"><i class="fa fa-angle-right" ></i></div>  
+            <div class="project project-004">
+                <h3>The GraphRAG ChatBot</h3>
+                <div class="img">
+                    <img src="/static/img/portfolio/projects/chatbot.avif" alt="Chatbot">
+                </div>
+
+                <div class="link">
+                    <a href="/ChatBot-Intro" target="_blank" rel="noopener noreferrer" ><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            
         </section>  
     </main>
 

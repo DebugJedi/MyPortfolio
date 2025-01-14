@@ -425,12 +425,13 @@ main {
 .footer-container {
     display: flex;
     justify-content: flex-end;
+    padding: 10px;
 }
 .footer-menu {
     display: flex;
     justify-content: flex-end;
     width: 100%;
-    /* border: 1px dashed white; */
+    padding-inline-end: 1rem;
 }
 
 .social-links {
@@ -462,6 +463,7 @@ main {
 .footer-links a {
     color: white;
     text-decoration: none;
+    padding-inline: 10px;
 }
 
 

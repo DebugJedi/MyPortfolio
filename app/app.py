@@ -68,6 +68,23 @@ async def get_aboutme(request: Request):
 async def get_aboutme(request: Request):
     return templates.TemplateResponse("chatbot.html", {"request": request})
 
+@app.get("/CancerPrediction-Intro", response_class=HTMLResponse)
+async def get_aboutme(request: Request):
+    return templates.TemplateResponse("cancerprediction.html", {"request": request})
+
+@app.get("/ColdEmail-Intro", response_class=HTMLResponse)
+async def get_aboutme(request: Request):
+    return templates.TemplateResponse("coldemail-intro.html", {"request": request})
+
+@app.get("/ObjDetection-Intro", response_class=HTMLResponse)
+async def get_aboutme(request: Request):
+    return templates.TemplateResponse("obj-intro.html", {"request": request})
+
+@app.get("/ChatBot-Intro", response_class=HTMLResponse)
+async def get_aboutme(request: Request):
+    return templates.TemplateResponse("chatbot-intro.html", {"request": request})
+
+
 @app.post("/upload_pdf")
 async def upload_pdf(file: UploadFile = File(...) ):
     try:
@@ -100,6 +117,7 @@ async def upload_pdf(file: UploadFile = File(...) ):
     except Exception as e:
         print(f"Unexpected Error: {str(e)}")
         raise HTTPException(status_code=500, detail=f"An unexpected error occured: {str(e)}")
+    
 @app.post("/query")
 async def query(body: dict= Body(...),
                 graph_rag: GraphRAG = Depends(get_graph_rag)):

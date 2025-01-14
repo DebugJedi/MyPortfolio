@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <title>ChatBot</title>
+    <link href="{{ url_for('static', path='css/chatbot-intro.css') }}" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://myportfolio-95815450908.us-west1.run.app/static/css/portfolio.css"> -->
+    
+
+</head>
+<body>
+    
+    <header class="header">
+        
+        <div class="h-box logo">            
+            <img src="{{ url_for('static', path='img/img5.png') }}" alt="logo">
+        </div>
+        
+        <div class="h-box logo-header">
+            <span class="name">MyLab</span>
+            <span class="profession">Data Science</span>
+        </div>
+
+        <nav class="h-box nav">
+            <ul class="nav__links">
+                <li><a class="home-button" href="/"> Home</a></li>
+                <li><a class="portfolio-button" href="/portfolio">Portfolio</a></li>
+                <li><a href="/chatbot" target="_blank" rel="noopener noreferrer"><i class="fas fa-external-link-alt"></i></a></li>
+                
+            </ul>
+        </nav>
+        
+        <div class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </header>
+
+    
+
+    <main class="pf-pages">
+        <section class="page page-1" id="skills">
+            <div class="introduction">
+                <h3 class="page-title">Chat Bot</h3>
+                <div class="info">
+                    To start using the app, simply <a href="/chatbot" target="_blank" rel="noopener noreferrer">click here</a>.
+                </div>
+                <div class="intro-para">
+                    <p>
+                        Welcome to my chatbot App, a powerful tool designed to help you easily extract and interact with 
+                        the information within any PDF document. 
+                        Whether you're dealing with research papers, reports, manuals, or any other type of document,
+                        this app provides an intelligent way to query and retrieve relevant information, all through natural language.
+                    </p>
+                </div>
+                <div class="img">
+                    <img src="/static/img/portfolio/projects/chatbot.avif" alt="Chatbot">
+                </div>
+                <div class="sh_ sub-heading">How it Works:</div>
+                <p>
+                    At the heart of this app is a sophisticated document processing and knowledge extraction pipeline that leverages cutting-edge technologies in natural language processing (NLP), embeddings, and graph-based search. Here’s how it works:
+                </p>
+                <div class="statements">
+                    <h2 class="sh_">1. Document Upload & Processing: </h2>
+                    <p class = "points_">
+                        First, you upload your PDF document to the app. The app then splits the document into smaller chunks to ensure that large documents are processed efficiently.
+                    </p>
+                    <p class = "points_">
+                        Each chunk is then converted into a dense vector representation using OpenAI’s advanced embedding model. These embeddings capture the semantic meaning of the text, allowing the app to understand the context and content of each document chunk.
+                    </p>
+                    <h2 class="sh_">2. Knowledge Graph Construction: </h2>
+                    <p class="points_">
+                        As the document is split into chunks, the app builds a knowledge graph to represent the relationships between different parts of the document. Each chunk of text is treated as a node in this graph, and edges are added based on the similarity between chunks and the concepts they share.
+                    </p>
+                    <p class="points_">
+                        The graph is enhanced with concepts and named entities (such as people, places, or specific terms) extracted from the document. This allows the app to understand the underlying structure and relationships within the content.
+                    </p>
+                    <h2 class="sh_">3. Querying the Document: </h2>
+                    <p class="points_">
+                        When you ask a question, the app searches the knowledge graph and document embeddings to find the most relevant parts of the document that can answer your query.
+                    </p>
+                    <p class="points_">
+                        The app employs Dijkstra-like traversal through the knowledge graph, prioritizing the most relevant and connected pieces of information, ensuring that the search is both fast and accurate.
+                    </p>
+                    <p class="points_">
+                        The context is expanded iteratively by exploring related chunks, and the app checks if the current context provides a complete answer. If needed, the app will generate a response based on the most relevant information available in the document.
+                    </p>
+                    
+                    <h2 class="sh_">4. Answer Generation:</h2>
+                    <p class = "points_">
+                        Once the app gathers enough context from the document, it uses OpenAI’s language model to generate a clear, concise answer to your query. If the context is insufficient, the app intelligently expands the context until a complete answer is found.
+                    </p>
+                    
+                    <!-- How to use app: -->
+                </div>
+                <div class="sh_ sub-heading">How to Use the App:</div>
+                <div class="statements">
+                    <h2 class="sh_">1. Answer Generation:</h2>
+                    <p class = "points_">
+                        Once the app gathers enough context from the document, it uses OpenAI’s language model to generate a clear, concise answer to your query. If the context is insufficient, the app intelligently expands the context until a complete answer is found.
+                    </p>
+                    <h2 class="sh_">1. Upload Your PDF:</h2>
+                    <p class = "points_">
+                        Simply upload your PDF document via the app's interface. The app will automatically handle document splitting, processing, and knowledge extraction.
+                    </p>
+                    <h2 class="sh_">2. Ask Your Question:</h2>
+                    <p class = "points_">
+                        After your document is processed, just type in any question related to the content of the document. For example, "What are the key findings of this report?" OR "Explain the methodology used in this research."
+                    </p>
+                    <h2 class="sh_">3. Get Your Answer:</h2>
+                    <p class = "points_">
+                        The app will quickly analyze the document and provide you with a direct, relevant answer. you can ask as many questions as you
+                        like, and the app will continuously adapt to provide more accurate responses.
+                    </p>
+                    
+                </div>
+
+                <div class="sh_ sub-heading">Target Users:</div>
+                <p>This app is designed for anyone who works with PDF documents and needs to quickly extract useful information. Some of the target users includes:</p>
+                <div class="statements">
+                    <h2 class="sh_">1. Researchers & Academics: If you're reading research papers, articles or technical reports,
+                        this app can help you find specific sections, theories, results, or citations without having to manually search through long documents.
+                    </h2>
+                    
+                    <h2 class="sh_">2. Business Professionals: Whether you're dealing with reports, manuals, or policy documents, this app helps 
+                        you pull out critical information, saving time and effort.
+                    </h2>
+                    <h2 class="sh_">3. Students: Get summaries or detailed explanations from textbooks, lecture ntoes, or any educational
+                        PDFs, even use it to clarify specific points during study.
+                    </h2>
+                    <h2 class="sh_">4. General Users: Anyone with a PDF they need to understand or query can use this app to save tiem and gain insights from their document.
+                    </h2>
+
+                    <p class = "points_">
+                        Once the app gathers enough context from the document, it uses OpenAI’s language model to generate a clear, concise answer to your query. If the context is insufficient, the app intelligently expands the context until a complete answer is found.
+                    </p>
+                    <h2 class="sh_">1. Upload Your PDF:</h2>
+                    <p class = "points_">
+                        Simply upload your PDF document via the app's interface. The app will automatically handle document splitting, processing, and knowledge extraction.
+                    </p>
+                    <h2 class="sh_">2. Ask Your Question:</h2>
+                    <p class = "points_">
+                        After your document is processed, just type in any question related to the content of the document. For example, "What are the key findings of this report?" OR "Explain the methodology used in this research."
+                    </p>
+                    <h2 class="sh_">3. Get Your Answer:</h2>
+                    <p class = "points_">
+                        The app will quickly analyze the document and provide you with a direct, relevant answer. you can ask as many questions as you
+                        like, and the app will continuously adapt to provide more accurate responses.
+                    </p>
+                    
+
+                    
+                </div>
+
+            </div>
+        </section>
+
+        
+    </main>
+
+   ]
+
+    <footer class="footer">
+        
+        <div class="footer-container">
+            <div class="social-links">
+                <ul class="social-media">
+                    <a href="https://github.com/DebugJedi" target="_blank" rel="noopener noreferrer" ><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/priyank-rao/" target="_blank" rel="noopener noreferrer" ><i class="fa-brands fa-linkedin-in"></i></a>
+                </ul>
+            </div>
+            <div class="footer-menu">
+                <ul class="footer-links">
+                    <li><a class="home-button footernav" href="/"> Home</a></li>
+                    <li><a class="portfolio-button footernav" href="/portfolio"> Portfolio</a></li>
+                    <li><a class="contact-button footernav" href="#page-2"> Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
+    <!-- <script src="/static/js/portfolio.js"></script> -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    
+    <!-- Boxicons CSS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>    
+    
+</body>
+</html>
