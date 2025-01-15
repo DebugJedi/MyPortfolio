@@ -248,6 +248,7 @@ section:first-child {
     min-height: 100dvh;
     flex-direction: column;
     background-color: var(--from-bg-img-10);
+    padding: 50px;
 }
 
 .page-1 .el:first-child {

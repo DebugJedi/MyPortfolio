@@ -78,7 +78,7 @@ async def get_aboutme(request: Request):
 
 @app.get("/ObjDetection-Intro", response_class=HTMLResponse)
 async def get_aboutme(request: Request):
-    return templates.TemplateResponse("obj-intro.html", {"request": request})
+    return templates.TemplateResponse("obj-detection-intro.html", {"request": request})
 
 @app.get("/ChatBot-Intro", response_class=HTMLResponse)
 async def get_aboutme(request: Request):
