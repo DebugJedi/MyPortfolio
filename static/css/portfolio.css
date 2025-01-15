@@ -526,9 +526,9 @@ li .stars {
     overflow-y: hidden;
     background-color: var(--page3-bg-color);
     align-items: center;
-    margin-block: 80px;
+    padding-block: 100px;
     padding-inline: 30px;
-    
+    border: 1px solid yellow;
 }
 
 .page-3 .header {
