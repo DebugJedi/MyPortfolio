@@ -83,6 +83,8 @@ class DocumentProcessor:
 
         splits = self.text_splitter.split_documents(documents)
         embeddings = []
+        if not splits:  # If empty, return an error or handle it
+            raise ValueError("No valid document chunks found after splitting.")
         for chunk in splits:
             
             embedd = self.openai_model.embed_documents(chunk.page_content)
