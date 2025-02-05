@@ -106,7 +106,7 @@ async def upload_pdf(file: UploadFile = File(...) ):
         try:
             graph_rag.process_documents(documents)
         except Exception as e:
-            raise HTTPException(status_code=400, detail="PDF not uploaded.")
+            raise HTTPException(status_code=400, detail=f"PDF not uploaded.: {e}")
         app.state.graphrag = graph_rag
 
         print("graphrag instances set: ", app.state.graphrag)
