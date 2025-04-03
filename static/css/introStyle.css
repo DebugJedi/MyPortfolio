@@ -279,12 +279,12 @@ main {
 .page-1 .box:nth-child(3) p {
     position: absolute;
     left: 0;
-    background-color: grey;
-    padding: 20px;
+    background-color: black;
+    padding: 50px;
     border-radius: 10px;
     position: absolute;
     bottom: 30px;
-    width: 50%;
+    width: 80%;
     align-items: center;
     left: 25%;
 }
