@@ -13,11 +13,11 @@
 
 </head>
 <body>
-    
+    {% set logo_img = 'img/img5.avif' %}
     <header class="header">
         
         <div class="h-box logo">            
-            <img src="{{ url_for('static', path='img/img5.png') }}" alt="logo">
+            <img src="{{ url_for('static', path=logo_img) }}" alt="logo">
         </div>
         
         <div class="h-box logo-header">

@@ -11,12 +11,13 @@
  
 </head>
 <body>
+    {% set logo_img = 'img/img5.avif' %}
     <div class="about">
         <nav class="container top-banner">
             <span class="scroll-watcher"></span>
             <div class="image-text">
                 <div class="image">
-                    <img src="{{ url_for('static', path='img/img5.png') }}" alt="logo">
+                    <img src="{{ url_for('static', path=logo_img) }}" alt="logo">
                 </div>
                 <div class="header-text">
                     <span class="name">MyLab</span>

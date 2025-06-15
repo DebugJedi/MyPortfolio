@@ -12,3 +12,4 @@ __pycache__/
 __pycache__
 .gitignore
 src/visualizer.py
+templates/base.html
