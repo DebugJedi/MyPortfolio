@@ -1,0 +1,283 @@
+{% extends "base.html" %}
+
+{% block title %}Cold Email Generator | Debug Jedi{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', path='css/pages/project-detail-styles.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<!-- PROJECT HERO -->
+<section class="project-hero">
+    <div class="hero-container">
+        <div class="breadcrumb">
+            <a href="/portfolio">← Back to Portfolio</a>
+        </div>
+
+        <div class="project-header">
+            <div class="project-category">
+                <i class="fas fa-envelope"></i>
+                AI-Powered Email Generation
+            </div>
+            <h1 class="project-title">Cold Email Generator</h1>
+            <p class="project-subtitle">
+                Streamline your job applications with AI-crafted personalized cold emails that match your resume to job postings perfectly
+            </p>
+
+            <div class="project-meta">
+                <div class="meta-item">
+                    <i class="fas fa-robot"></i>
+                    <span>LangChain</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-brain"></i>
+                    <span>ChatGroq</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-file-pdf"></i>
+                    <span>PyPDF2</span>
+                </div>
+            </div>
+
+            <div class="cta-buttons">
+                <a href="/cold-email" target="_blank" class="btn btn-primary">
+                    <i class="fas fa-rocket"></i>
+                    Launch App
+                </a>
+                <a href="https://github.com/DebugJedi/coldEmail" target="_blank" class="btn btn-secondary">
+                    <i class="fab fa-github"></i>
+                    View Code
+                </a>
+            </div>
+        </div>
+
+        <div class="project-image-hero">
+            <img src="{{ url_for('static', path='img/portfolio/projects/ColdEmail.avif') }}" alt="Cold Email Generator">
+        </div>
+    </div>
+</section>
+
+<!-- OVERVIEW CARDS -->
+<section class="overview-section">
+    <div class="section-container">
+        <div class="overview-grid">
+            <div class="overview-card">
+                <div class="card-icon">
+                    <i class="fas fa-magic"></i>
+                </div>
+                <h3>What It Does</h3>
+                <p>
+                    Automatically generates <strong>personalized cold emails</strong> by analyzing your resume 
+                    and matching it to job posting requirements using advanced AI models.
+                </p>
+            </div>
+
+            <div class="overview-card">
+                <div class="card-icon">
+                    <i class="fas fa-cogs"></i>
+                </div>
+                <h3>How It Works</h3>
+                <p>
+                    Upload your resume, paste a job URL, and let the AI extract key skills, 
+                    parse requirements, and <strong>craft the perfect email</strong> in seconds.
+                </p>
+            </div>
+
+            <div class="overview-card">
+                <div class="card-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <h3>Why It Matters</h3>
+                <p>
+                    <strong>Save hours of writing time.</strong> Stand out with tailored emails 
+                    that highlight your exact fit for each role.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- KEY FEATURES -->
+<section class="features-section">
+    <div class="section-container">
+        <h2 class="section-title">
+            <i class="fas fa-star"></i>
+            Key Features
+        </h2>
+
+        <div class="features-grid">
+            <div class="feature-box">
+                <div class="feature-icon">📄</div>
+                <h4>Resume Analysis</h4>
+                <p>Extracts skills, experience, and accomplishments from PDF</p>
+            </div>
+
+            <div class="feature-box">
+                <div class="feature-icon">🔍</div>
+                <h4>Job Parsing</h4>
+                <p>Scrapes and analyzes job postings in JSON format</p>
+            </div>
+
+            <div class="feature-box">
+                <div class="feature-icon">🤖</div>
+                <h4>AI-Powered</h4>
+                <p>Uses ChatGroq to craft personalized emails</p>
+            </div>
+
+            <div class="feature-box">
+                <div class="feature-icon">⚡</div>
+                <h4>Lightning Fast</h4>
+                <p>Generate emails in seconds, not hours</p>
+            </div>
+
+            <div class="feature-box">
+                <div class="feature-icon">🎯</div>
+                <h4>Perfect Match</h4>
+                <p>Aligns your skills with job requirements</p>
+            </div>
+
+            <div class="feature-box">
+                <div class="feature-icon">🌐</div>
+                <h4>Web-Based</h4>
+                <p>Access from anywhere, no installation</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- HOW TO USE -->
+<section class="usage-section">
+    <div class="section-container">
+        <h2 class="section-title">
+            <i class="fas fa-play-circle"></i>
+            How to Use
+        </h2>
+
+        <div class="usage-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Upload Your Resume</h3>
+                    <p>Upload your resume in PDF format. The app will extract your skills, experience, and accomplishments.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Paste Job URL</h3>
+                    <p>Provide the URL of the job posting you're interested in. The app will parse the requirements.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Get Your Email</h3>
+                    <p>Click submit and receive a professional, tailored cold email highlighting your perfect fit for the role.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TECH STACK -->
+<section class="tech-stack-section">
+    <div class="section-container">
+        <h2 class="section-title">
+            <i class="fas fa-layer-group"></i>
+            Technology Stack
+        </h2>
+
+        <div class="tech-categories">
+            <div class="tech-category">
+                <h3>AI & NLP</h3>
+                <div class="tech-badges">
+                    <span class="tech-badge">
+                        <i class="fas fa-link"></i> LangChain
+                    </span>
+                    <span class="tech-badge">
+                        <i class="fas fa-brain"></i> ChatGroq
+                    </span>
+                    <span class="tech-badge">
+                        <i class="fas fa-file-pdf"></i> PyPDF2
+                    </span>
+                </div>
+            </div>
+
+            <div class="tech-category">
+                <h3>Web Framework</h3>
+                <div class="tech-badges">
+                    <span class="tech-badge">
+                        <i class="fas fa-stream"></i> Streamlit
+                    </span>
+                    <span class="tech-badge">
+                        <i class="fab fa-python"></i> Python
+                    </span>
+                    <span class="tech-badge">
+                        <i class="fas fa-globe"></i> Web Scraping
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="cta-section">
+    <div class="section-container">
+        <div class="cta-box">
+            <h2>Ready to Generate Your Perfect Cold Email?</h2>
+            <p>Start crafting personalized, professional emails that get responses.</p>
+            <a href="/coldemail" target="_blank" class="btn btn-primary btn-large">
+                <i class="fas fa-rocket"></i>
+                Launch Cold Email Generator
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- RELATED PROJECTS -->
+<section class="related-section">
+    <div class="section-container">
+        <h2 class="section-title">
+            <i class="fas fa-project-diagram"></i>
+            More Projects
+        </h2>
+
+        <div class="related-grid">
+            <a href="/cancer-prediction" class="related-card">
+                <div class="related-image">
+                    <img src="{{ url_for('static', path='img/portfolio/projects/CancerPrediction.avif') }}" alt="Cancer Prediction">
+                </div>
+                <div class="related-info">
+                    <h4>Cancer Prediction</h4>
+                    <p>AI-powered diagnostic tool</p>
+                </div>
+            </a>
+
+            <a href="/hand-gesture-detection" class="related-card">
+                <div class="related-image">
+                    <img src="{{ url_for('static', path='img/portfolio/projects/Object-detection.avif') }}" alt="Hand Gesture">
+                </div>
+                <div class="related-info">
+                    <h4>Hand Gesture Detection</h4>
+                    <p>Real-time YOLO recognition</p>
+                </div>
+            </a>
+
+            <a href="/graphrag-chatbot" class="related-card">
+                <div class="related-image">
+                    <img src="{{ url_for('static', path='img/portfolio/projects/chatbot.avif') }}" alt="ChatBot">
+                </div>
+                <div class="related-info">
+                    <h4>GraphRAG ChatBot</h4>
+                    <p>Advanced retrieval system</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

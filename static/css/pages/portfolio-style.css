@@ -1,0 +1,767 @@
+/* ==========================================
+   PORTFOLIO PAGE - MATCHING MAIN PAGE DESIGN
+   Interactive Starfield Background
+   ========================================== */
+
+/* CSS VARIABLES - Same as main page */
+:root {
+    /* Dark Theme Colors */
+    --color-bg-primary: #0a0e1a;
+    --color-bg-secondary: #121827;
+    --color-surface: #1e2638;
+    
+    /* Accent Colors - Cosmic Theme */
+    --color-primary: #ef4444;
+    --color-secondary: #f59e0b;
+    --color-blue: #60a5fa;
+    --color-purple: #a78bfa;
+    
+    /* Text */
+    --color-text-primary: #ffffff;
+    --color-text-secondary: #e2e8f0;
+    --color-text-tertiary: #94a3b8;
+    
+    /* Spacing */
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 0.75rem;
+    --space-4: 1rem;
+    --space-6: 1.5rem;
+    --space-8: 2rem;
+    --space-12: 3rem;
+    
+    /* Typography */
+    --font-display: 'Space Grotesk', sans-serif;
+    --font-body: 'Inter', sans-serif;
+}
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    background: var(--color-bg-primary);
+    color: var(--color-text-primary);
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+/* ==========================================
+   NAVIGATION - Same as main page
+   ========================================== */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(10, 14, 26, 0.9);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(96, 165, 250, 0.1);
+    z-index: 1000;  /* ← INCREASED: Ensure it's above everything */
+    transition: all 0.3s ease;
+}
+
+.header.scrolled {
+    background: rgba(10, 14, 26, 0.95);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.nav-container {
+    max-width: 100%;
+    margin: 0;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-right: auto;
+}
+
+.nav-logo {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.nav-identity {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-name {
+    font-family: var(--font-display);
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--color-text-primary);
+}
+
+.nav-tagline {
+    font-size: 0.875rem;
+    color: var(--color-text-tertiary);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-link {
+    color: var(--color-text-secondary);
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--color-primary);
+}
+
+.nav-link:hover::after, .nav-link.active::after {
+    width: 100%;
+}
+
+/* Mobile Menu */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    cursor: pointer;
+}
+
+.nav-toggle span {
+    width: 24px;
+    height: 2px;
+    background: var(--color-text-primary);
+    transition: all 0.3s ease;
+}
+
+/* ==========================================
+   STARFIELD CANVAS
+   ========================================== */
+
+#starfieldCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;  /* ← CHANGED: Put canvas behind everything */
+    pointer-events: auto;  /* Allow mouse interaction */
+}
+
+/* ==========================================
+   MAIN CONTENT
+   ========================================== */
+
+.portfolio-content {
+    position: relative;
+    z-index: 1;
+    padding-top: 100px;  /* ← REDUCED: Better spacing */
+    min-height: 100vh;
+}
+
+/* ==========================================
+   SECTION STYLING
+   ========================================== */
+
+.portfolio-section {
+    padding: 3rem 2rem;  /* ← REDUCED: Better spacing */
+    min-height: auto;  /* ← CHANGED: Don't force full height */
+}
+
+.section-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;  /* ← REDUCED: Better spacing */
+    padding-top: 2rem;  /* ← ADDED: Top padding */
+}
+
+.section-label {
+    color: var(--color-blue);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.section-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ==========================================
+   SKILLS SECTION
+   ========================================== */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    gap: 2rem;
+}
+
+.skill-category {
+    background: rgba(30, 38, 56, 0.7);
+    border: 1px solid rgba(96, 165, 250, 0.2);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+.skill-category:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-blue);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7);
+}
+
+.category-title {
+    font-size: 1.3rem;
+    color: var(--color-blue);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(96, 165, 250, 0.2);
+}
+
+.category-title i {
+    font-size: 1.75rem;
+}
+
+.skills-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.skill-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    background: rgba(96, 165, 250, 0.05);
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.skill-item:hover {
+    background: rgba(96, 165, 250, 0.15);
+    transform: translateX(5px);
+    box-shadow: 0 0 20px rgba(96, 165, 250, 0.3);
+}
+
+.skill-name {
+    font-weight: 500;
+    color: var(--color-text-secondary);
+}
+
+.skill-stars {
+    color: var(--color-secondary);
+    font-size: 1rem;
+    letter-spacing: 2px;
+}
+
+/* ==========================================
+   CERTIFICATES SECTION
+   ========================================== */
+
+.certificates-wrapper {
+    position: relative;
+    padding: 0 5rem;  /* Space for arrows */
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.certificates-carousel {
+    position: relative;
+    overflow: hidden;
+}
+
+.certificates-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  /* 3 columns */
+    grid-template-rows: repeat(2, 1fr);     /* 2 rows */
+    gap: 2rem;
+    transition: transform 0.5s ease;
+}
+
+.certificate-card {
+    background: rgba(30, 38, 56, 0.7);
+    border: 1px solid rgba(96, 165, 250, 0.2);
+    border-radius: 1.5rem;
+    overflow: hidden;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+.certificate-card.hidden {
+    display: none;
+}
+
+.certificate-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--color-blue);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7);
+}
+
+.cert-image {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    background: var(--color-bg-secondary);
+}
+
+.cert-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.certificate-card:hover .cert-image img {
+    transform: scale(1.05);
+}
+
+.cert-info {
+    padding: 1.5rem;
+}
+
+.cert-info h3 {
+    font-size: 1.25rem;
+    color: var(--color-text-primary);
+    margin-bottom: 1rem;
+}
+
+.cert-info a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--color-blue);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.cert-info a:hover {
+    color: var(--color-primary);
+    gap: 0.75rem;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+    box-shadow: 0 4px 20px rgba(239, 68, 68, 0.3);
+}
+
+.carousel-btn:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    box-shadow: none;
+}
+
+.carousel-btn:not(:disabled):hover {
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 10px 30px rgba(239, 68, 68, 0.6);
+}
+
+.carousel-btn.prev {
+    left: 0;
+}
+
+.carousel-btn.next {
+    right: 0;
+}
+
+/* Carousel indicators (dots) */
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 2rem;
+}
+
+.carousel-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(96, 165, 250, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.carousel-indicator.active {
+    background: var(--color-blue);
+    width: 32px;
+    border-radius: 6px;
+}
+
+.carousel-indicator:hover {
+    background: rgba(96, 165, 250, 0.6);
+}
+
+/* ==========================================
+   PROJECTS SECTION
+   ========================================== */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.project-card {
+    background: rgba(30, 38, 56, 0.7);
+    border: 1px solid rgba(96, 165, 250, 0.2);
+    border-radius: 1.5rem;
+    overflow: hidden;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--color-blue);
+    box-shadow: 0 30px 80px rgba(0, 0, 0, 0.7);
+}
+
+.project-image {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    background: var(--color-bg-secondary);
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.1);
+}
+
+.project-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(10, 14, 26, 0.9), transparent);
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 1.5rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-link {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.25rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.project-link:hover {
+    transform: scale(1.15);
+    box-shadow: 0 10px 30px rgba(239, 68, 68, 0.6);
+}
+
+.project-info {
+    padding: 1.5rem;
+}
+
+.project-info h3 {
+    font-size: 1.25rem;
+    color: var(--color-text-primary);
+    margin-bottom: 0.75rem;
+}
+
+.project-info p {
+    color: var(--color-text-tertiary);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tag {
+    padding: 0.4rem 0.8rem;
+    background: rgba(96, 165, 250, 0.1);
+    border: 1px solid rgba(96, 165, 250, 0.3);
+    border-radius: 9999px;
+    font-size: 0.8rem;
+    color: var(--color-blue);
+    transition: all 0.3s ease;
+}
+
+.project-card:hover .tag {
+    background: rgba(96, 165, 250, 0.2);
+    border-color: var(--color-blue);
+}
+
+/* ==========================================
+   FOOTER - Same as main page
+   ========================================== */
+
+.footer {
+    background: var(--color-bg-primary);
+    padding: 3rem 2rem 2rem;
+    border-top: 1px solid rgba(96, 165, 250, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
+.footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 2rem;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-links a {
+    width: 40px;
+    height: 40px;
+    background: rgba(96, 165, 250, 0.1);
+    border: 1px solid rgba(96, 165, 250, 0.2);
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-blue);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background: var(--color-blue);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 0.75rem;
+}
+
+.footer-links a {
+    color: var(--color-text-tertiary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: var(--color-blue);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(96, 165, 250, 0.1);
+    color: var(--color-text-tertiary);
+    font-size: 0.875rem;
+}
+
+/* ==========================================
+   BACK TO TOP BUTTON
+   ========================================== */
+
+.back-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 1.25rem;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 50;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(239, 68, 68, 0.4);
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+   ========================================== */
+
+@media (max-width: 1024px) {
+    .skills-grid,
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .certificates-wrapper {
+        padding: 0 3rem;
+    }
+
+    .certificates-container {
+        grid-template-columns: repeat(2, 1fr);  /* 2 columns on tablets */
+        grid-template-rows: repeat(3, 1fr);     /* 3 rows = 6 visible */
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background: var(--color-surface);
+        flex-direction: column;
+        padding: 6rem 2rem;
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.5);
+        transition: right 0.3s ease;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .portfolio-content {
+        padding-top: 100px;
+    }
+
+    .portfolio-section {
+        padding: 3rem 1rem;
+    }
+
+    .skills-grid,
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .certificates-wrapper {
+        padding: 0 3.5rem;
+    }
+
+    .certificates-container {
+        grid-template-columns: 1fr;  /* 1 column on mobile */
+        grid-template-rows: repeat(6, 1fr);  /* 6 rows = 6 visible */
+    }
+
+    .carousel-btn {
+        width: 44px;
+        height: 44px;
+        font-size: 1.1rem;
+    }
+}

@@ -1,0 +1,360 @@
+{% extends "base.html" %}
+
+{% block title %}Hand Gesture Detection | Debug Jedi{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', path='css/pages/project-detail-styles.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<!-- PROJECT HERO -->
+<section class="project-hero">
+    <div class="hero-container">
+        <div class="breadcrumb">
+            <a href="/portfolio">← Back to Portfolio</a>
+        </div>
+
+        <div class="project-header">
+            <div class="project-category">
+                <i class="fas fa-hand-paper"></i>
+                Computer Vision
+            </div>
+            <h1 class="project-title">Hand Gesture Detection with YOLO 11m</h1>
+            <p class="project-subtitle">
+                Real-time gesture recognition using state-of-the-art YOLO 11m model for detecting OK, Thumbs Up/Down, Peace, and Fingers Crossed gestures
+            </p>
+
+            <div class="project-meta">
+                <div class="meta-item">
+                    <i class="fas fa-eye"></i>
+                    <span>YOLO 11m</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-image"></i>
+                    <span>Image & Video</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-stream"></i>
+                    <span>Streamlit</span>
+                </div>
+            </div>
+
+            <div class="cta-buttons">
+                <a href="https://computervision-w7a5mhbcfnbui4.streamlit.app/" target="_blank" class="btn btn-primary">
+                    <i class="fas fa-rocket"></i>
+                    Launch App
+                </a>
+                <a href="https://github.com/DebugJedi/ComputerVision" target="_blank" class="btn btn-secondary">
+                    <i class="fab fa-github"></i>
+                    View Code
+                </a>
+            </div>
+        </div>
+
+        <div class="project-image-hero">
+            <img src="{{ url_for('static', path='img/portfolio/projects/Object-detection.avif') }}" alt="Hand Gesture Detection">
+        </div>
+    </div>
+</section>
+
+<!-- OVERVIEW CARDS -->
+<section class="overview-section">
+    <div class="section-container">
+        <div class="overview-grid">
+            <div class="overview-card">
+                <div class="card-icon">
+                    <i class="fas fa-hand-rock"></i>
+                </div>
+                <h3>What It Does</h3>
+                <p>
+                    Detects <strong>5 hand gestures</strong> in real-time from images, videos, or live camera feeds using a custom-trained YOLO 11m model.
+                </p>
+            </div>
+
+            <div class="overview-card">
+                <div class="card-icon">
+                    <i class="fas fa-cogs"></i>
+                </div>
+                <h3>How It Works</h3>
+                <p>
+                    Upload media or use live feed, customize detection settings (confidence threshold, object classes), and get instant results with <strong>bounding boxes</strong>.
+                </p>
+            </div>
+
+            <div class="overview-card">
+                <div class="card-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3>Who It's For</h3>
+                <p>
+                    Perfect for <strong>developers, researchers, and hobbyists</strong> exploring computer vision and gesture recognition applications.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- DETECTED GESTURES -->
+<section class="gestures-section">
+    <div class="section-container">
+        <h2 class="section-title">
+            <i class="fas fa-hand-sparkles"></i>
+            Detected Gestures
+        </h2>
+
+        <div class="gestures-grid">
+            <div class="gesture-card">
+                <div class="gesture-icon">👌</div>
+                <h4>OK</h4>
+                <p>Classic OK hand sign</p>
+            </div>
+
+            <div class="gesture-card">
+                <div class="gesture-icon">👍</div>
+                <h4>Thumbs Up</h4>
+                <p>Positive approval gesture</p>
+            </div>
+
+            <div class="gesture-card">
+                <div class="gesture-icon">👎</div>
+                <h4>Thumbs Down</h4>
+                <p>Negative response gesture</p>
+            </div>
+
+            <div class="gesture-card">
+                <div class="gesture-icon">🤞</div>
+                <h4>Fingers Crossed</h4>
+                <p>Good luck gesture</p>
+            </div>
+
+            <div class="gesture-card">
+                <div class="gesture-icon">✌️</div>
+                <h4>Peace Out</h4>
+                <p>Victory/peace sign</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- KEY FEATURES -->
+<section class="features-section">
+    <div class="section-container">
+        <h2 class="section-title">
+            <i class="fas fa-star"></i>
+            Key Features
+        </h2>
+
+        <div class="features-grid">
+            <div class="feature-box">
+                <div class="feature-icon">📷</div>
+                <h4>Image Upload</h4>
+                <p>Detect gestures in JPEG, JPG, or AVIF images</p>
+            </div>
+
+            <div class="feature-box">
+                <div class="feature-icon">🎥</div>
+                <h4>Video Processing</h4>
+                <p>Analyze MP4 videos frame-by-frame</p>
+            </div>
+
+            <div class="feature-box">
+                <div class="feature-icon">📹</div>
+                <h4>Live Feed</h4>
+                <p>Real-time detection from camera (coming soon)</p>
+            </div>
+
+            <div class="feature-box">
+                <div class="feature-icon">🎯</div>
+                <h4>Custom Classes</h4>
+                <p>Select specific gestures to detect</p>
+            </div>
+
+            <div class="feature-box">
+                <div class="feature-icon">⚙️</div>
+                <h4>Confidence Tuning</h4>
+                <p>Adjust threshold for precision vs recall</p>
+            </div>
+
+            <div class="feature-box">
+                <div class="feature-icon">🚀</div>
+                <h4>GPU Support</h4>
+                <p>CPU or GPU processing options</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- HOW TO USE -->
+<section class="usage-section">
+    <div class="section-container">
+        <h2 class="section-title">
+            <i class="fas fa-play-circle"></i>
+            How to Use
+        </h2>
+
+        <div class="usage-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Select Input Source</h3>
+                    <p>Choose from Image, Video, or Live Feed in the sidebar menu. Upload your file in the supported format.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Customize Settings</h3>
+                    <p>Select specific gesture classes or detect all. Adjust the confidence threshold slider to balance precision and recall.</p>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Detect & Analyze</h3>
+                    <p>Click "Detect" to process. View results with bounding boxes, confidence scores, and detected gesture labels.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- INPUT FORMATS -->
+<section class="formats-section">
+    <div class="section-container">
+        <h2 class="section-title">
+            <i class="fas fa-file-import"></i>
+            Supported Formats
+        </h2>
+
+        <div class="formats-grid">
+            <div class="format-card">
+                <i class="fas fa-images format-icon"></i>
+                <h3>Images</h3>
+                <div class="format-types">
+                    <span class="format-badge">.avif</span>
+                    <span class="format-badge">.jpeg</span>
+                    <span class="format-badge">.jpg</span>
+                </div>
+            </div>
+
+            <div class="format-card">
+                <i class="fas fa-video format-icon"></i>
+                <h3>Videos</h3>
+                <div class="format-types">
+                    <span class="format-badge">.mp4</span>
+                </div>
+            </div>
+
+            <div class="format-card">
+                <i class="fas fa-camera format-icon"></i>
+                <h3>Live Feed</h3>
+                <div class="format-types">
+                    <span class="format-badge coming-soon">Coming Soon</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TECH STACK -->
+<section class="tech-stack-section">
+    <div class="section-container">
+        <h2 class="section-title">
+            <i class="fas fa-layer-group"></i>
+            Technology Stack
+        </h2>
+
+        <div class="tech-categories">
+            <div class="tech-category">
+                <h3>Computer Vision</h3>
+                <div class="tech-badges">
+                    <span class="tech-badge">
+                        <i class="fas fa-eye"></i> YOLO 11m
+                    </span>
+                    <span class="tech-badge">
+                        <i class="fas fa-cubes"></i> OpenCV
+                    </span>
+                    <span class="tech-badge">
+                        <i class="fas fa-brain"></i> Deep Learning
+                    </span>
+                </div>
+            </div>
+
+            <div class="tech-category">
+                <h3>Development</h3>
+                <div class="tech-badges">
+                    <span class="tech-badge">
+                        <i class="fas fa-stream"></i> Streamlit
+                    </span>
+                    <span class="tech-badge">
+                        <i class="fab fa-python"></i> Python
+                    </span>
+                    <span class="tech-badge">
+                        <i class="fas fa-server"></i> PyTorch
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="cta-section">
+    <div class="section-container">
+        <div class="cta-box">
+            <h2>Ready to Detect Hand Gestures?</h2>
+            <p>Try the app now and experience real-time gesture recognition powered by YOLO 11m.</p>
+            <a href="https://computervision-w7a5mhbcfnbui4.streamlit.app/" target="_blank" class="btn btn-primary btn-large">
+                <i class="fas fa-rocket"></i>
+                Launch Detection App
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- RELATED PROJECTS -->
+<section class="related-section">
+    <div class="section-container">
+        <h2 class="section-title">
+            <i class="fas fa-project-diagram"></i>
+            More Projects
+        </h2>
+
+        <div class="related-grid">
+            <a href="/cancer-prediction" class="related-card">
+                <div class="related-image">
+                    <img src="{{ url_for('static', path='img/portfolio/projects/CancerPrediction.avif') }}" alt="Cancer Prediction">
+                </div>
+                <div class="related-info">
+                    <h4>Cancer Prediction</h4>
+                    <p>AI-powered diagnostic tool</p>
+                </div>
+            </a>
+
+            <a href="/cold-email" class="related-card">
+                <div class="related-image">
+                    <img src="{{ url_for('static', path='img/portfolio/projects/ColdEmail.avif') }}" alt="Cold Email">
+                </div>
+                <div class="related-info">
+                    <h4>Cold Email Generator</h4>
+                    <p>AI-powered email crafting</p>
+                </div>
+            </a>
+
+            <a href="/graphrag-chatbot" class="related-card">
+                <div class="related-image">
+                    <img src="{{ url_for('static', path='img/portfolio/projects/chatbot.avif') }}" alt="ChatBot">
+                </div>
+                <div class="related-info">
+                    <h4>GraphRAG ChatBot</h4>
+                    <p>Advanced retrieval system</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

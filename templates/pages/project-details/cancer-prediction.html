@@ -1,0 +1,236 @@
+{% extends "base.html" %}
+
+{% block title %}Cancer Prediction | Debug Jedi{% endblock %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', path='css/pages/project-detail-styles.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<!-- PROJECT HERO -->
+<section class="project-hero">
+    <div class="hero-container">
+        <div class="breadcrumb">
+            <a href="/portfolio">← Back to Portfolio</a>
+        </div>
+
+        <div class="project-header">
+            <div class="project-category">
+                <i class="fas fa-brain"></i>
+                Deep Learning
+            </div>
+            <h1 class="project-title">Cancer Prediction using Neural Networks</h1>
+            <p class="project-subtitle">
+                AI-powered diagnostic tool using PyTorch to predict tumor malignancy with 95%+ accuracy
+            </p>
+
+            <div class="project-meta">
+                <div class="meta-item">
+                    <i class="fas fa-code"></i>
+                    <span>PyTorch</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Neural Networks</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-server"></i>
+                    <span>Streamlit</span>
+                </div>
+            </div>
+
+            <div class="cta-buttons">
+                <a href="https://cancerprediction-j4wt7j.streamlit.app/" target="_blank" class="btn btn-primary">
+                    <i class="fas fa-rocket"></i>
+                    Launch App
+                </a>
+                <a href="https://github.com/DebugJedi/CancerPrediction" target="_blank" class="btn btn-secondary">
+                    <i class="fab fa-github"></i>
+                    View Code
+                </a>
+            </div>
+        </div>
+
+        <div class="project-image-hero">
+            <img src="{{ url_for('static', path='img/portfolio/projects/CancerPrediction.avif') }}" alt="Cancer Prediction App">
+        </div>
+    </div>
+</section>
+
+<!-- OVERVIEW CARDS -->
+<section class="overview-section">
+    <div class="section-container">
+        <div class="overview-grid">
+            <div class="overview-card">
+                <div class="card-icon">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <h3>What It Does</h3>
+                <p>
+                    Predicts whether a breast mass is <strong>benign or malignant</strong> based on 30 clinical measurements 
+                    including radius, texture, perimeter, and area of cell nuclei.
+                </p>
+            </div>
+
+            <div class="overview-card">
+                <div class="card-icon">
+                    <i class="fas fa-cogs"></i>
+                </div>
+                <h3>How It Works</h3>
+                <p>
+                    Uses a <strong>deep neural network</strong> trained on Wisconsin Breast Cancer dataset. 
+                    Features are preprocessed, normalized, and fed through multiple layers to produce predictions.
+                </p>
+            </div>
+
+            <div class="overview-card">
+                <div class="card-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <h3>Why It Matters</h3>
+                <p>
+                    <strong>Early detection saves lives.</strong> This tool assists medical professionals 
+                    in making faster, data-driven diagnostic decisions with high accuracy.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- KEY FEATURES -->
+<section class="features-section">
+    <div class="section-container">
+        <h2 class="section-title">
+            <i class="fas fa-star"></i>
+            Key Features
+        </h2>
+
+        <div class="features-grid">
+            <div class="feature-box">
+                <div class="feature-icon">🎯</div>
+                <h4>High Accuracy</h4>
+                <p>Achieves 95%+ accuracy on test dataset</p>
+            </div>
+
+            <div class="feature-box">
+                <div class="feature-icon">⚡</div>
+                <h4>Real-Time</h4>
+                <p>Instant predictions as you adjust sliders</p>
+            </div>
+
+            <div class="feature-box">
+                <div class="feature-icon">📊</div>
+                <h4>Visual Insights</h4>
+                <p>Radar charts for data exploration</p>
+            </div>
+
+            <div class="feature-box">
+                <div class="feature-icon">🔬</div>
+                <h4>Clinical Grade</h4>
+                <p>Based on medical research dataset</p>
+            </div>
+
+            <div class="feature-box">
+                <div class="feature-icon">🎨</div>
+                <h4>User Friendly</h4>
+                <p>Intuitive interface, no coding required</p>
+            </div>
+
+            <div class="feature-box">
+                <div class="feature-icon">🌐</div>
+                <h4>Web-Based</h4>
+                <p>Access from anywhere, any device</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TECH STACK -->
+<section class="tech-stack-section">
+    <div class="section-container">
+        <h2 class="section-title">
+            <i class="fas fa-layer-group"></i>
+            Technology Stack
+        </h2>
+
+        <div class="tech-categories">
+            <div class="tech-category">
+                <h3>Machine Learning</h3>
+                <div class="tech-badges">
+                    <span class="tech-badge">
+                        <i class="fas fa-fire"></i> PyTorch
+                    </span>
+                    <span class="tech-badge">
+                        <i class="fas fa-chart-line"></i> Scikit-learn
+                    </span>
+                    <span class="tech-badge">
+                        <i class="fas fa-table"></i> Pandas
+                    </span>
+                    <span class="tech-badge">
+                        <i class="fas fa-calculator"></i> NumPy
+                    </span>
+                </div>
+            </div>
+
+            <div class="tech-category">
+                <h3>Web Application</h3>
+                <div class="tech-badges">
+                    <span class="tech-badge">
+                        <i class="fas fa-stream"></i> Streamlit
+                    </span>
+                    <span class="tech-badge">
+                        <i class="fas fa-chart-area"></i> Plotly
+                    </span>
+                    <span class="tech-badge">
+                        <i class="fab fa-python"></i> Python
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- RELATED PROJECTS -->
+<section class="related-section">
+    <div class="section-container">
+        <h2 class="section-title">
+            <i class="fas fa-project-diagram"></i>
+            More Projects
+        </h2>
+
+        <div class="related-grid">
+            <a href="/cold-email" class="related-card">
+                <div class="related-image">
+                    <img src="{{ url_for('static', path='img/portfolio/projects/ColdEmail.avif') }}" alt="Cold Email">
+                </div>
+                <div class="related-info">
+                    <h4>Cold Email Generator</h4>
+                    <p>AI-powered outreach automation</p>
+                </div>
+            </a>
+
+            <a href="/hand-gesture-detection" class="related-card">
+                <div class="related-image">
+                    <img src="{{ url_for('static', path='img/portfolio/projects/Object-detection.avif') }}" alt="Object Detection">
+                </div>
+                <div class="related-info">
+                    <h4>Hand Gesture Detection</h4>
+                    <p>Real-time YOLO recognition</p>
+                </div>
+            </a>
+
+            <a href="/graphrag-chatbot" class="related-card">
+                <div class="related-image">
+                    <img src="{{ url_for('static', path='img/portfolio/projects/chatbot.avif') }}" alt="ChatBot">
+                </div>
+                <div class="related-info">
+                    <h4>GraphRAG ChatBot</h4>
+                    <p>Advanced retrieval system</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

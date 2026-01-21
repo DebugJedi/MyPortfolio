@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cold Email Generator 📧</title>
+    <link rel="stylesheet" href="{{ url_for('static', path='css/pages/coldEmail.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- Animated Email Background -->
+    <div class="email-background">
+        <div class="floating-email"></div>
+        <div class="floating-email"></div>
+        <div class="floating-email"></div>
+        <div class="floating-email"></div>
+        <div class="floating-email"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="app-header">
+        <div class="header-container">
+            <a href="/" class="back-button">
+                <i class="fas fa-arrow-left"></i>
+                <span>Back to Portfolio</span>
+            </a>
+            <div class="app-title">
+                <i class="fas fa-envelope-open-text"></i>
+                <h1>Cold Email Generator</h1>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="main-container">
+        <div class="app-container">
+            <!-- Hero Section -->
+            <div class="hero-section">
+                <div class="hero-badge">
+                    <i class="fas fa-robot"></i>
+                    <span>AI-Powered</span>
+                </div>
+                <h2 class="hero-title">Generate Perfect Cold Emails</h2>
+                <p class="hero-subtitle">
+                    Upload your resume and paste a job URL. Our AI will craft a personalized, 
+                    professional email that highlights your perfect fit for the role.
+                </p>
+            </div>
+
+            <!-- Input Form -->
+            <div class="form-container">
+                <!-- Resume Upload -->
+                <div class="input-section">
+                    <div class="section-header">
+                        <i class="fas fa-file-pdf"></i>
+                        <h3>Step 1: Upload Your Resume</h3>
+                    </div>
+                    <div class="upload-area" id="upload-area">
+                        <div class="upload-content">
+                            <i class="fas fa-cloud-upload-alt upload-icon"></i>
+                            <p class="upload-text">Click to upload or drag and drop</p>
+                            <p class="upload-hint">PDF files only</p>
+                            <input type="file" id="resume-upload" accept=".pdf" hidden>
+                        </div>
+                        <div class="file-info" id="file-info" style="display: none;">
+                            <i class="fas fa-file-pdf file-icon"></i>
+                            <span class="file-name" id="file-name"></span>
+                            <button class="remove-file" id="remove-file">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Job URL Input -->
+                <div class="input-section">
+                    <div class="section-header">
+                        <i class="fas fa-link"></i>
+                        <h3>Step 2: Paste Job Posting URL</h3>
+                    </div>
+                    <div class="url-input-wrapper">
+                        <i class="fas fa-globe input-icon"></i>
+                        <input 
+                            type="url" 
+                            id="job-url" 
+                            placeholder="https://example.com/job-posting"
+                            class="url-input"
+                        >
+                    </div>
+                    <div class="url-examples">
+                        <span class="example-label">Supported sites:</span>
+                        <span class="example-site">LinkedIn</span>
+                        <span class="example-site">Indeed</span>
+                        <span class="example-site">Glassdoor</span>
+                        <span class="example-site">Company Websites</span>
+                    </div>
+                </div>
+
+                <!-- Generate Button -->
+                <div class="action-section">
+                    <button id="submit-button" class="generate-btn">
+                        <i class="fas fa-magic"></i>
+                        <span>Generate Cold Email</span>
+                    </button>
+                    <p class="action-hint">
+                        <i class="fas fa-info-circle"></i>
+                        Processing usually takes 5-10 seconds
+                    </p>
+                </div>
+            </div>
+
+            <!-- Loading State -->
+            <div id="loading" class="loading-container" style="display: none;">
+                <div class="loading-spinner">
+                    <div class="spinner"></div>
+                </div>
+                <p class="loading-text">Analyzing resume and job posting...</p>
+                <p class="loading-subtext">Our AI is crafting your perfect email</p>
+            </div>
+
+            <!-- Result Section -->
+            <div id="result" class="result-container" style="display: none;">
+                <div class="result-header">
+                    <div class="result-title">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>Your Cold Email is Ready!</h3>
+                    </div>
+                    <div class="result-actions">
+                        <button class="action-btn copy-btn" id="copy-btn">
+                            <i class="fas fa-copy"></i>
+                            <span>Copy</span>
+                        </button>
+                        <button class="action-btn download-btn" id="download-btn">
+                            <i class="fas fa-download"></i>
+                            <span>Download</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="email-preview" id="email-content">
+                    <!-- Email content will be inserted here -->
+                </div>
+                <div class="result-footer">
+                    <button class="generate-another-btn" id="generate-another">
+                        <i class="fas fa-redo"></i>
+                        <span>Generate Another Email</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Features -->
+            <div class="features-section">
+                <h3 class="features-title">Why Use Our Generator?</h3>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <i class="fas fa-bolt"></i>
+                        <h4>Lightning Fast</h4>
+                        <p>Generate emails in seconds</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-bullseye"></i>
+                        <h4>Highly Targeted</h4>
+                        <p>Matches your skills to job requirements</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <h4>Professional</h4>
+                        <p>Grammar-perfect, recruiter-ready</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-chart-line"></i>
+                        <h4>Higher Response Rate</h4>
+                        <p>Personalized emails get 3x more replies</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+        <p>Built with ❤️ using LangChain, ChatGroq & PyPDF2</p>
+        <div class="footer-links">
+            <a href="https://github.com/DebugJedi/coldEmail" target="_blank">
+                <i class="fab fa-github"></i> View Source
+            </a>
+            <a href="/portfolio">
+                <i class="fas fa-briefcase"></i> More Projects
+            </a>
+        </div>
+    </footer>
+
+    <script src="{{ url_for('static', path='js/projects/coldEmail.js') }}"></script>
+</body>
+</html>

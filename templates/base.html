@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="{% block meta_description %}Priyank Rao - Data Science Portfolio{% endblock %}">
+    
+    <title>{% block title %}Debug Jedi | Data Science{% endblock %}</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- Base CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', path='css/base.css') }}">
+    
+    <!-- Page-specific CSS -->
+    {% block extra_css %}{% endblock %}
+</head>
+<body>
+    <!-- Navigation Component -->
+    {% include 'components/navbar.html' %}
+    
+    <!-- Starfield Canvas (on all pages) -->
+    <canvas id="starfieldCanvas"></canvas>
+    
+    <!-- Main Content Area (child pages fill this) -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    
+    <!-- Footer Component -->
+    {% include 'components/footer.html' %}
+    
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+    
+    <!-- Base JavaScript -->
+    <script src="{{ url_for('static', path='js/pages/portfolio-script.js') }}"></script>
+    
+    <!-- Page-specific JavaScript -->
+    {% block extra_js %}{% endblock %}
+</body>
+</html>

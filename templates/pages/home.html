@@ -1,0 +1,163 @@
+{% extends "base.html" %}
+
+{% block title %}Home | Debug Jedi - Data Science Portfolio{% endblock %}
+{% block extra_css %}
+<link rel="stylesheet" href="{{ url_for('static', path='css/pages/home.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<!-- HERO SECTION -->
+<section class="hero" id="home">
+    <div class="hero-container">
+        <div class="hero-text">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                <span>Available for Opportunities</span>
+            </div>
+
+            <h1>
+                <span class="title-greeting">Hi</span>
+                <span class="title-line">It's</span>
+                <span class="title-highlight">Debug Jedi</span>
+            </h1>
+
+            <!-- <div class="hero-subtitle">
+                I am a <span class="rotating-text">Problem Solver</span>
+            </div> -->
+
+            <p class="hero-description">
+                Hi, I am Priyank Rao, a data-driven professional with <strong>6 years of experience</strong>
+                in analytics and machine learning. I specialize in building innovative tools and workflows
+                to solve complex problems and drive efficiency. Like ancient navigators using Ursa Major
+                to find their way, I use data to guide decisions and discover insights.
+            </p>
+
+            <div class="cta-buttons">
+                <a href="/portfolio" class="btn btn-primary">
+                    <span>View My Work →</span>
+                </a>
+                <a href="#contact" class="btn btn-secondary">Let's Connect</a>
+            </div>
+
+            <div class="tech-stack">
+                <span class="tech-badge">🐍 Python</span>
+                <span class="tech-badge">🧠 TensorFlow</span>
+                <span class="tech-badge">🔥 PyTorch</span>
+                <span class="tech-badge">📊 Scikit-learn</span>
+                <span class="tech-badge">☁️ AWS</span>
+                <span class="tech-badge">🐳 Docker</span>
+            </div>
+        </div>
+
+        <div class="stats-card">
+            <div class="stats-header">
+                <div class="stats-icon">📊</div>
+                <div class="stats-title">Performance Metrics</div>
+            </div>
+
+            <div class="stat-item">
+                <div class="stat-row">
+                    <div class="stat-label">Years of Experience</div>
+                    <div class="stat-value">6+</div>
+                </div>
+                <div class="stat-bar">
+                    <div class="stat-fill" style="width: 85%;"></div>
+                </div>
+            </div>
+
+            <div class="stat-item">
+                <div class="stat-row">
+                    <div class="stat-label">ML Models Deployed</div>
+                    <div class="stat-value">20+</div>
+                </div>
+                <div class="stat-bar">
+                    <div class="stat-fill" style="width: 92%; animation-delay: 0.2s"></div>
+                </div>
+            </div>
+
+            <div class="stat-item">
+                <div class="stat-row">
+                    <div class="stat-label">Client Satisfaction</div>
+                    <div class="stat-value">100%</div>
+                </div>
+                <div class="stat-bar">
+                    <div class="stat-fill" style="width: 100%; animation-delay: 0.4s"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="scroll-indicator">
+        <div class="scroll-line"></div>
+        <span>Scroll to explore</span>
+    </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="contact" id="contact">
+    <div class="contact-container">
+        <div class="contact-header">
+            <span class="section-label">Get In Touch</span>
+            <h2 class="section-title">Let's Work Together!</h2>
+            <p class="contact-intro">Have a great idea? Let's turn it into reality.</p>
+        </div>
+
+        <div class="contact-content">
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <input type="text" class="form-input" id="name" placeholder="Your Name" required>
+                    <span class="form-error">Please enter your name</span>
+                </div>
+
+                <div class="form-group">
+                    <input type="email" class="form-input" id="email" placeholder="Your Email" required>
+                    <span class="form-error">Please enter a valid email</span>
+                </div>
+
+                <div class="form-group">
+                    <textarea class="form-input form-textarea" id="message" placeholder="Your Message" required></textarea>
+                    <span class="form-error">Please enter a message</span>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%;">
+                    <span>Send Message</span>
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </form>
+
+            <div class="contact-info">
+                <div class="contact-method">
+                    <div class="method-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="method-content">
+                        <h4>Email</h4>
+                        <a href="mailto:priyankrao2512@gmail.com">priyankrao2512@gmail.com</a>
+                    </div>
+                </div>
+
+                <div class="contact-method">
+                    <div class="method-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </div>
+                    <div class="method-content">
+                        <h4>LinkedIn</h4>
+                        <a href="https://www.linkedin.com/in/priyank-rao/" target="_blank">Connect with me</a>
+                    </div>
+                </div>
+
+                <div class="contact-method">
+                    <div class="method-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <div class="method-content">
+                        <h4>GitHub</h4>
+                        <a href="https://github.com/DebugJedi" target="_blank">View my code</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
