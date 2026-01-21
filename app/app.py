@@ -11,6 +11,19 @@ from app.config import settings
 from app.api.routes import pages, chatbot, email, contact, analytics
 from app.api.middleware.analytics import AnalyticsMiddleware
 from app.api.middleware.security import SecurityHeadersMiddleware
+from starlette.middleware.base import BaseHTTPMiddleware
+from starlette.datastructures import Headers
+
+class ProxyHeadersMiddleware(BaseHTTPMiddleware):
+    """Middleware to handle X-Forwarded-Proto header for HTTPS"""
+    async def dispatch(self, request, call_next):
+        # Check if request came through HTTPS proxy
+        forwarded_proto = request.headers.get("x-forwarded-proto")
+        if forwarded_proto:
+            request.scope["scheme"] = forwarded_proto
+        
+        response = await call_next(request)
+        return response
 
 def create_app() -> FastAPI:
     """Application factory"""
@@ -20,6 +33,7 @@ def create_app() -> FastAPI:
         docs_url="/api/docs" if settings.DEBUG else None,
     )
     
+    app.add_middleware(ProxyHeadersMiddleware)
     # CORS
     app.add_middleware(
         CORSMiddleware,
@@ -62,4 +76,4 @@ app = create_app()
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run("app.main:app", host="0.0.0.0", port=8080, reload=settings.DEBUG)
+    uvicorn.run("app.app:app", host="0.0.0.0", port=8080, reload=settings.DEBUG)
